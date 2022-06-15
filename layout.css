@@ -1,0 +1,3766 @@
+@charset "utf-8";
+/* font-family: 'Inter', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Nanum+Gothic:wght@400;700;800&display=swap');
+/* font-family: 'Nanum Gothic', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700&display=swap');
+/* font-family: 'Gothic A1', sans-serif; */
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul,li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+button{border: none; background: none; text-indent: -9999px; cursor: pointer;}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+body{
+    font-family: 'Nanum Gothic', sans-serif; line-height: 1px; overflow-x: hidden;
+}
+html{
+    font-size: 0.625rem; overflow-x: hidden;
+}
+.blind{
+    position: absolute; top: -9999px; left: -9999px;
+}
+.mainslide{
+    text-align: center; margin-top: -11px;
+}
+.mainslide .slick-dots{
+    width: 200px; height: 20px;position: relative; text-align: center; left: 50%; transform: translateX(-50%); bottom: 40px;
+}
+.mainslide .slick-dots li{
+    width: 12px; height: 12px; display: inline-block; background-color: #c5c5c5;; position: relative; border-radius: 50%; margin-right: 5%; text-indent: -9999px;
+}
+.mainslide .slick-dots li.slick-active{
+    background-color: #6a318a;
+}
+
+/* .mainslide .slick-dots > li > button {
+    line-height: normal;
+    width:200px;
+    height:50px;
+    color:rgb(0, 0, 0);
+    font-size:1rem; top: 0; margin-left: 500px;
+}
+
+.mainslide .slick-dots > li > button::before {
+    display:none;
+} */
+
+
+
+/* header */
+.navwrap{
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 75px; background: #fff; z-index: 100;
+}
+h1{
+    width: 159px; height: 55px; position: absolute; left: 50%; transform: translateX(-50%); 
+}
+h1 img{
+    width: 100%;
+}
+#gnb{
+    display: none;
+}
+
+.mobilebtn{
+    position: absolute; top: 26px; right: 5%; width: 32px; height: 30px; 
+}
+.mobilebtn span{
+    display: block; height: 5px; margin: 4px 0; border-radius: 5px; background: #333;
+}
+.innerbtn{
+    position: relative; top: 0px; right: 40px; width: 40px; height: 40px; z-index: 100; background: #efefef; float: left;
+}
+.innerbtn a{
+    background: url(../img/xsign.png)no-repeat center/cover; width: 30px; height: 30px; display: block; margin: 5px auto; text-indent: -9999px; border-bottom: none;
+}
+.inner .innerbtn a:hover{
+    border-bottom: none;
+}
+.innerbtn.on{
+    display: none;
+}
+
+
+.mobilenav{
+    display: none;
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); z-index: 100; transition: all 0.5s;
+}
+.mobilenav.on{
+    display: block;
+}
+
+.inner{
+    position: fixed; top: 0; margin-right: -77%;
+    width: 66.667%; height: 100%; right: 0; z-index: 100;
+    /* margin-right: -66.667%;  */
+    background-color: #efefef; 
+}
+
+
+
+.inner .buttonHead{
+    height: 60px; margin: 17px 25px; width: 80%; display: block; 
+}
+.buttonHead img{
+    display: block; height: 100%; float: left;
+}
+.inner span{float: right; margin-top: 25px; font-size: 1.4rem; font-weight: 700;}
+
+.innermenu{
+    border-top: 1px solid #c5c5c5; background-color: #e6e6e6;
+    display: block;  padding: 20px 23px; width: 100%; border-bottom: 1px solid #c5c5c5; 
+}
+
+.innermenu li{
+    position: relative; padding: 20px 0px; margin-bottom: 10px;
+    font-size: 2rem; font-weight: 700;
+}
+
+.innerService{
+    color: #6a318a; margin: 35px 15px 20px 15px;
+}
+.innerService li{
+    width: 33.333%; margin-bottom: 20px; text-align: center; float: left; font-size: 1.4rem; line-height: 20px;
+}
+.inner a:hover{
+    border-bottom: 1px solid #333;
+}
+
+.inner > a{
+    width: 50%; height: 50px; background-color: #6a318a; display: block; float: left; text-align: center; line-height: 50px; color: #fff; border-right: 1px solid #fff; box-sizing: border-box; font-size: 1.6rem; font-weight: 700;
+}
+#visual{
+    margin: 75px 0 0 0; 
+    /* padding-top: 90px;  */
+    width: 100%; height: 400px; 
+    /* background: url(../img/main\ img.png) no-repeat bottom/cover; position: relative; */
+}
+
+.slide1 a{
+    display: block; background: url(../img/slide4.png)no-repeat center/cover; height: 400px;
+}
+.slide2 a{
+    display: block; background: url(../img/slide2.png)no-repeat center/cover; height: 400px;
+}
+.slide3 a{
+    display: block; background: url(../img/slide3-1.png)no-repeat center/cover; height: 400px;
+}
+.slide4 a{
+    display: block; background: url(../img/test1.png)no-repeat center/cover; height: 400px;
+}
+
+/* .mainslide .slideimg img{
+    height: 100%; float: left; 
+} */
+
+.maintext{
+    display: block; font-size: 3.5rem; font-weight: 700; line-height: 50px; position: absolute; width: 290px; margin-top: 70px; margin-left: 1%; text-align: left; width: 100%;
+}
+.maintext span{
+    display: block;
+}
+.maintext p{
+    font-size: 2.4rem;
+}
+.slide1 .maintext p{
+    color: #afcb3a; font-size: 2rem;
+}
+.slide1 .maintext{
+    color: #fff;
+}
+.slide2 .maintext{
+    color: #fff
+}
+.slide2 .maintext p{
+    color: gold;
+}
+.slide4 .maintext{
+    color: #000;
+}
+.slide3 .maintext p{
+    color: #6a318a;
+}
+.slide4 .maintext p{
+    color: rgba(211, 0, 0, 0.927);
+    
+}
+/* slickslider 넣어서 삭제해도 이상없음 */
+/*
+.roll{
+    position: relative;
+    width: 400px;
+    height: 20px;
+    left: 50%;
+    margin-left: -200px;
+    bottom: 30px;
+    text-align: center;
+    z-index: 10;
+}
+ .roll li{
+    display: inline-block; margin-left: 12px;
+}
+.roll li:first-child{
+    margin-left: 0;
+}
+.roll li a{
+    display: block;
+    width: 10px; height: 10px;
+    background: #c5c5c5;
+    border-radius: 50%;
+    text-indent: -9999px;
+    transition: all 0.3s;
+}
+.roll li.on a{
+    background-color: #6a318a;
+} */
+
+
+/* aside */
+#menubar #mainevent{
+    display: none;
+}
+#menubar #sns{
+    position: fixed; z-index: 10; top: 75%; right: 2%;
+}
+#menubar #sns .locate,#menubar #sns .you,#menubar #sns .call{
+    width: 40px; height: 40px; font-size: 1.4rem; line-height: 20px; background-color: #6a318a; border-radius: 50%; margin-bottom: 5px;
+}
+#menubar #sns .locate span{
+    width: 80%; height: 80%; margin: 2px 4px;
+    background: url(../img/locate.png) no-repeat center/contain; display: inline-block; text-indent: -9999px;
+} 
+
+#menubar #sns .you span{
+    width: 70%; height: 70%; margin: 6px 5px;
+    background: url(../img/yyyyyy.png) no-repeat center/contain; display: inline-block; text-indent: -9999px;
+} 
+#menubar #sns .call span{
+    width: 65%; height: 65%; margin: 8px 5px;
+    background: url(../img/call.png) no-repeat center/contain; display: inline-block; text-indent: -9999px;
+} 
+
+
+
+
+/* Fresh&Refresh service */
+
+#service{
+    padding: 50px 0; width: 100%; position: relative; float: left;
+}
+.serviceInner > div{
+    width: 81.333%; margin: 0 auto;
+}
+#service h2{
+    margin-bottom: 35px; text-align: center; font-size: 3.2rem; font-weight: 800; line-height: 32px;
+}
+ 
+.iconsub > li{
+    padding-bottom: 60px; 
+    float: left; 
+    width: 33.333%;
+}
+
+
+.icon{
+    position: relative; margin: 0 auto;
+}
+
+
+.iconsub span{
+    position: absolute; width: 90px;
+    margin-top: 112px; text-align: center; font-size: 1.4rem;
+    /* margin-left: 1.333%; */
+    line-height: 15px;
+}
+.icon .iconsub li a:hover{
+    background-color: #4edb49;
+}
+
+.iconsub .ic1 a{
+    background: #fcdd4f url(../img/service_04.png) no-repeat center/contain; width: 100px; height: 100px; border-radius: 50%; display: block; margin: 0 auto;
+}
+.iconsub .ic2 a{
+    background: #fcdd4f url(../img/service_05.png) no-repeat center/contain; width: 100px; height: 100px; border-radius: 50%; display: block; margin: 0 auto; 
+}
+.iconsub .ic3 a{
+    background: #fcdd4f url(../img/service_06.png) no-repeat center/contain; width: 100px; height: 100px; border-radius: 50%; display: block; margin: 0 auto;
+}
+.iconsub .ic4 a{
+    background: #fcdd4f url(../img/service_07.png) no-repeat center/contain; width: 100px; height: 100px; border-radius: 50%; display: block;margin: 0 auto;
+}
+.iconsub .ic5 a{
+    background: #fcdd4f url(../img/service_08.png) no-repeat center/contain; width: 100px; height: 100px; border-radius: 50%; display: block; margin: 0 auto;
+}
+.iconsub .ic6 a{
+    background: #fcdd4f url(../img/service_09.png) no-repeat center/contain; width: 100px; height: 100px; border-radius: 50%; display: block; margin: 0 auto;
+}
+.iconsub .ic7 a{
+    background: #fcdd4f url(../img/service_02.png) no-repeat center/contain; width: 100px; height: 100px; border-radius: 50%; display: block; margin: 0 auto;
+}
+.iconsub .ic8 a{
+    background: #fcdd4f url(../img/service_03.png) no-repeat center/contain; width: 100px; height: 100px; border-radius: 50%; display: block; margin: 0 auto;
+}
+.iconsub .ic9 a{
+    background: #fcdd4f url(../img/service_01.png) no-repeat center/contain; width: 100px; height: 100px; border-radius: 50%; display: block; margin: 0 auto;
+}
+
+/* 추가 */
+.multiple-items .slick-dots{
+    width: 200px; height: 10px;position: relative; text-align: center; left: 50%; transform: translateX(-50%); bottom: 0px; margin-top: 30px;
+}
+.multiple-items .slick-dots li{ background-color: #afcb3a;
+    width: 12px; height: 12px; display: inline-block; background-color: #c5c5c5;; position: relative; border-radius: 50%; margin-right: 5%; text-indent: -9999px;
+}
+.multiple-items .slick-dots li.slick-active{
+    background-color: #6a318a;
+}
+
+
+
+
+
+
+/* .pcRoll{
+    position:relative;
+    width: 400px;
+    height: 20px;
+    left: 50%;
+    margin-left: -200px;
+    bottom: 0px;
+    text-align: center;
+    display: none;
+    
+}
+.pcRoll li{
+    display: inline-block; margin-left: 12px;
+}
+.pcRoll li:first-child{
+    margin-left: 0;
+}
+.pcRoll li a{
+    display: block;
+    width: 10px; height: 10px;
+    background: #c5c5c5;
+    border-radius: 50%;
+    text-indent: -9999px;
+    transition: all 0.3s;
+}
+.pcRoll li.on a{
+    background-color: #6a318a;
+} */
+
+
+#event{
+    padding: 0 0 50px 0; width: 100%;
+}
+
+#event div{
+    margin: 0 auto;
+}
+
+#event h2{
+    margin-bottom: 20px; text-align: center; font-size: 3.2rem; font-weight: 800; line-height: 32px; 
+}
+
+#event .title{
+    font-size: 2rem; line-height: 20px; margin-bottom: 35px; text-align: center; font-weight: 700; 
+}
+
+#emain1,#emain2{
+    width: 66.667%;
+}
+#event .imgBox1{
+    width: 100%; height: 200px; position: relative;
+    background: url(../img/12event2.png) no-repeat center/cover; margin-bottom: 20px; transform: translateX(-100px); transition: all 0.6s ease-in-out 0s; opacity: 0;
+
+}
+#event .imgBox1.active,
+#event .imgBox2.active{
+    transform: translateX(0); opacity: 1;
+}
+.textBox1{
+    transform: translateX(100px); transition: all 0.6s ease-in-out 0.2s; opacity: 0;
+}
+.textBox2{
+    transform: translateX(-100px); transition: all 0.6s ease-in-out 0s;  opacity: 0;
+}
+.textBox1.active{
+    transform: translateX(0); opacity: 1;
+}
+.textBox2.active{
+    transform: translateX(0); opacity: 1;
+}
+.textBox1,.textBox2{
+    width: 100%; position: relative;
+}
+
+#event h3{
+    font-size: 2.4rem; text-align: center; line-height: 24px; margin-bottom: 20px; font-weight: 700;
+}
+.textBox1 p{
+    font-size: 1.6rem; font-weight: 700; line-height: 20px; text-align: center; margin-bottom: 35px;
+}
+.textBox1 a,.textBox2 a{
+    display: none;
+}
+
+#event .imgBox2{
+    width: 100%; height: 200px; position: relative; 
+    background: url(../img/1234.png) no-repeat center/cover; margin-bottom: 20px; 
+    transform: translateX(100px); transition: all 0.6s ease-in-out 0.2s;  opacity: 0;
+}
+
+#event .tt2{
+    font-size: 2.4rem; text-align: center; line-height: 24px; margin-bottom: 20px; font-weight: 700;
+}
+.textBox2 p{
+    font-size: 1.6rem; font-weight: 700; line-height: 20px; text-align: center; margin-bottom: 0;
+}
+
+
+
+
+/* sns */
+#sociallive{
+    width: 100%; background-color: #d4ebe7;
+}
+.content_wrap{
+    width: 81.333%; margin: 0 auto; padding: 35px 0px 45px 0px;
+}
+
+.contents{
+    position: relative; 
+}
+
+#sociallive h2{
+    text-align: center; font-size: 3.2rem; font-weight: 800; line-height: 32px; margin-bottom: 35px;
+}
+.CU{
+    background-color: #6a318a; position: relative; float: left; width: 58.065%; color: #fff; height: 123px; overflow: hidden;
+}
+/* .CUmain{
+    background-color: #6a318a; color: #fff; width: 100%; padding: 0; margin: 0;  height: 100%;
+} */
+
+.CUmain p{
+    text-align: center; line-height: 30px; font-size: 1.6rem; position: absolute; top: 50%; transform: translateY(-50%); width: 100%; padding: 0 15px;
+}
+
+
+
+
+
+.blog{
+    position: relative; background-color: #afcb3a; width: 37.097%; float: right; height: 160px; overflow: hidden;
+}
+.blogImg{
+    width: 100%; height: 117px; position: relative; 
+    background: url(../img/blog.png) no-repeat top/cover;
+}
+.blog .title{
+    width: 100%; text-align: center; font-size: 1.6rem;  padding: 10px; color: #fff;
+}
+.blog .title p{
+    display: none;
+    line-height: 24px;
+}
+.blog .title .mobile{
+    display: block; letter-spacing: -1px;
+}
+
+
+.facebook{
+    background-color: #3d5b99; position: relative; float: left; width: 37.097%; margin-top: 30px; height: 160px; overflow: hidden;
+}
+.facebookImg{
+    width: 100%; height: 114px; position: relative; 
+    background: url(../img/facebook.png) no-repeat top/cover;
+}
+
+.facebook .title{
+    width: 100%; text-align: center; font-size: 1.6rem; color: #fff; padding: 2px;
+}
+.facebook .title p{
+    display: none;
+    line-height: 20px;
+}
+.facebook .title .mobile{
+    display: block;
+}
+
+
+.youtube{
+    background-color: #b91414; position: relative; float: right; width: 58.065%; margin-top: 30px; height: 123px; overflow: hidden;
+}
+
+.youtubeImg{
+    width: 100%; height: 100px; position: relative; 
+    background: url(../img/youtubethumnail.png) no-repeat top/cover;
+}
+
+.youtube .title{
+    color: #fff; width: 100%; height: 23px; text-align: center; font-size: 1.6rem; line-height: 20px;
+}
+.youtube .ytt{
+    display: none;
+}
+
+
+
+/* detail */
+
+#sociallive .detail{
+    display: none;
+}
+
+
+/* company */
+#company{
+    padding: 50px 0 60px 0 ; width: 100%; height: 100%; margin: 0 auto;
+}
+.companycontents{
+    width: 100%; margin: 0 auto; padding: 30px 0px 50px 0px;
+}
+
+.cmain{
+    position: relative; width: 81.333%; margin: 0 auto;
+}
+
+#company h2{
+    margin-bottom: 35px; text-align: center; font-size: 3.2rem; font-weight: 800; line-height: 32px;
+}
+
+.csub1,.csub3{
+    width: 48.387%; height: 150px; float: left;
+    /* overflow: hidden; */
+    
+}
+
+.csub2,.csub4{
+    width: 48.387%; height: 150px; float: right;
+}
+
+.csub1 a{
+    display: block; font-size: 1.8rem; font-weight: 700; line-height: 28px; text-align: center; background-color: #afcb3a; height: 100%; color: #fff; position: relative; 
+}
+
+.csub2 a,.csub3 a,.csub4 a{
+    display: block; font-size: 1.8rem;font-weight: 700; line-height: 28px; text-align: center; background-color: #afcb3a; height: 100%; color: #fff; position: relative; 
+}
+.csub1 p,.csub2 p,.csub3 p,.csub4 p{
+    position: absolute; top: 50%; transform: translateY(-50%); width: 100%; padding: 10px;
+}
+
+.csub1,.csub2{margin-bottom: 10px;}
+
+
+
+/* company detail */
+.sub{display: none;}
+
+.csub1 .sub,.csub2 .sub{
+    position: absolute; top: 0; height: 150px; width: 48.387%; background-color: #6a318a;
+    
+}
+.csub3 .sub,.csub4 .sub{
+    position: absolute; top: 0; height: 150px; width: 48.387%; background-color: #6a318a; margin-top: 160px;
+}
+.csub1 .sub a,
+.csub2 .sub a,
+.csub3 .sub a,
+.csub4 .sub a{
+    background-color: #6a318a;
+}
+
+.csub1 .sub li,.csub2 .sub li,.csub3 .sub li,.csub4 .sub li{
+    height: 50%; font-size: 1.8rem; text-align: center; line-height: 20px; padding-top: 25px; color: #fff;
+}
+.sub li:first-child{border-bottom: 1px solid #fff;}
+
+
+
+/* footer */
+
+footer{
+    width: 100%; background-color: #333;
+}
+
+footer .fcontent{
+    width:81.333%; padding: 40px 0; margin: 0 auto;
+}
+
+#familysite{
+    width: 100%; margin-bottom: 28px; display: block; height: 100%;
+}
+.family1{
+    width: 100%; height: 25px;
+}
+.family1 li{
+    width: 33.333%; float: left; height: 100%; text-indent: -9999px;
+}
+
+.family1 li:nth-child(1){
+    background: url(../img/fbgf.png) no-repeat center/contain;
+}
+.family1 li:nth-child(2){
+    background: url(../img/fbgfretail.png) no-repeat center/contain;
+}
+.family1 li:nth-child(3){
+    background: url(../img/fcumembership.png) no-repeat center/contain;
+}
+
+
+.family2{
+    margin-top: 10px; width: 100%; height: 25px;
+}
+
+.family2 li{
+    width: 24%; float: left; height: 100%; margin-left: 3px;
+}
+
+
+.family2 li:nth-child(1){
+    background: url(../img/fbgfnetwork.png) no-repeat center/contain;
+}
+.family2 li:nth-child(2){
+    background: url(../img/fbgfhumannet.png) no-repeat center/contain;
+}
+.family2 li:nth-child(3){
+    background: url(../img/fbgflogis.png) no-repeat center/contain;
+}
+.family2 li:nth-child(4){
+    background: url(../img/fbgfpost.png) no-repeat center/contain;
+}
+
+#fmenu{
+    width: 40%; float: left; margin-left: 4.667%; color: #a5a5a5;
+}
+
+#fmenu li{
+    color: #a5a5a5; font-size: 1.4rem; line-height: 25px;
+}
+#fmenu li a{
+    color: #a5a5a5;
+}
+#fmenu li:nth-child(1){
+    float: left;
+}
+#fmenu li:nth-child(1)::after{
+    content: "|";
+    display: inline-block;
+    margin: 0 5px;
+}
+
+#address{
+    width: 35%; float: right; margin-right: 4.667%;
+}
+#address p{
+    font-size: 1.4rem; line-height: 25px; color: #a5a5a5;
+}
+.copy{
+    display: block; clear: both;
+    margin-top: 20px; text-align: center; line-height: 25px; color: #a5a5a5; font-size: 1.6rem;
+}
+
+
+/* 768 */
+@media screen and (min-width: 768px){
+
+body{
+    font-family:'Nanum Gothic', sans-serif;;
+}
+
+/* header */
+.navwrap{
+    height: 80px;
+}
+h1{
+    width: 160px;
+}
+
+.mobilebtn{
+    top: 22px; width: 48px; height: 36px;
+}
+.mobilebtn span{
+    width: 48px; height: 8px; margin: 3px 0;
+}
+/* 
+.mobilenav .innerbtn{
+    right: -26.7%;
+} */
+
+
+
+
+
+/* .inner{
+    width: 39.974%;
+}
+.inner .buttonHead{
+    height: 80px;
+} */
+
+.buttonHead img{
+    height: 80px; margin-top: -10px;
+}
+.inner span{
+    font-size: 1.6rem; margin-top: 32px;
+}
+.innermenu{
+    padding: 30px 28px 0 28px;
+}
+.innermenu li{
+    font-size: 2.4rem; margin: 25px 0;
+}
+.innermenu li:first-child{
+    margin-top: 0;
+}
+.innerService{
+    margin: 30px 29px 0 29px; 
+}
+.innerService li{
+    margin-bottom: 25px; font-size: 1.8rem;
+}
+.inner > a{
+    font-size: 1.8rem; height: 63px;
+    line-height: 60px;
+}
+/* #visual{
+    height: 550px;
+} */
+#visual{
+    margin-top: 80px; 
+    /* padding: 140px 0;  */
+    height: 550px; 
+    /* background: url(../img/slide1.png) no-repeat center/cover; */
+}
+/* .mainslide .slideimg{
+    height: 550px;
+} */
+.slide1 a,.slide2 a,.slide3 a,.slide4 a{
+    height: 550px;
+}
+
+
+.maintext{
+    font-size: 5.5rem; line-height: 76px; margin-left: 1.2%; margin-top: 120px;
+}
+.maintext p{
+    font-size: 3rem;
+}
+.slide1 .maintext p{
+    font-size: 2.4rem;
+}
+
+/* .roll{
+    bottom: 10px;
+} */
+
+
+
+/* aside */
+
+#menubar #sns{
+    position: fixed; z-index: 10; top: 65%; right: 0;
+}
+
+#menubar #sns .locate,#menubar #sns .you,#menubar #sns .call{
+    width: 60px; height: 60px; font-size: 1.6rem;
+}
+#menubar #sns .locate span{
+    margin: 1px 6px;
+}
+#menubar #sns .you span{
+    margin: 9px;
+}
+#menubar #sns .call span{
+    margin: 10px;
+}
+#menubar #sns .locate span:hover{
+    text-indent: 0; text-align: center; color: #fff; font-size: 1.5rem; line-height: 20px; font-weight: 700; background: #6a318a; width: 70%; height: auto; margin: 10px 9px;
+}
+#menubar #sns .you span:hover{
+    text-indent: 0; text-align: center; color: #fff; font-size: 1.5rem; line-height: 20px; font-weight: 700; background: #6a318a; width: 70%; height: auto; margin: 10px 8px;
+}
+#menubar #sns .call span:hover{
+    text-indent: 0; text-align: center; color: #fff; font-size: 1.5rem; line-height: 18px; font-weight: 700; background: #6a318a; 
+}
+
+
+/* Fresh&Refresh service */
+#service{
+    padding: 70px 0;
+}
+
+.serviceInner > div{
+    width: 80.730%;
+}
+#service h2{
+    font-size: 4.5rem; line-height: 45px;
+}
+
+.iconsub li a{
+    /* display: none;  */
+    padding-bottom: 40px; width: auto; margin-left: 1%; text-indent: -9999px;
+}
+
+
+.iconsub span{
+    /* text-indent: -9999px; */
+    width: 192px; height: 192px; margin-top: 0; font-size: 1.8rem; margin-left: 0; line-height: 22px; padding: 80px 30px;
+}
+.iconsub .ic3 span{
+    margin-top: 0px;
+}
+.iconsub li a:hover{
+    text-indent: 0;
+}
+
+
+.iconsub .ic1 a{
+    width: 192px; height: 192px;
+}
+.iconsub .ic2 a{
+    width: 192px; height: 192px;
+}
+.iconsub .ic3 a{
+    width: 192px; height: 192px;
+}
+.iconsub .ic4 a{
+    width: 192px; height: 192px;
+}
+.iconsub .ic5 a{
+    width: 192px; height: 192px;
+}
+.iconsub .ic6 a{
+    width: 192px; height: 192px;
+}
+.iconsub .ic7 a{
+    width: 192px; height: 192px;
+}
+.iconsub .ic8 a{
+    width: 192px; height: 192px;
+}
+.iconsub .ic9 a{
+    width: 192px; height: 192px;
+}
+
+.pcRoll{
+    display: block;
+}
+
+
+
+
+/* event */
+#event{
+    padding-top: 0; padding-bottom: 70px;
+}
+#event h2{
+    margin-bottom: 35px; font-size: 4.5rem; line-height: 45px;
+}
+#event .title{
+    font-size: 27px; line-height: 27px; margin-bottom: 45px;
+}
+
+#emain1,#emain2{
+    width: 80.730%; 
+}
+
+#emain1 .imgBox1{
+    width: 53.226%; float: left; height: 267px; margin-bottom: 40px; background: url(../img/12event2_768.jpg)no-repeat center/cover;
+}
+.textBox1{
+    width: 46.774%; float: right;
+}
+
+#event .tt1{
+    font-size: 3rem; text-align: left; line-height: 32px; margin-top: 25px; padding-left: 7.813%; font-weight: 800;
+}
+.textBox1 p{
+    font-size: 1.8rem;line-height: 25px; text-align: left; padding-left: 7.813%; margin-bottom: 25px; font-weight: 700;
+}
+.textBox1 a{
+    display: block; width: 150px; height: 50px; background-color: #6a318a; font-size: 1.6rem; line-height: 50px; color: #fff; margin-left: 7.813%; padding: 0 35px; font-weight: 700;
+}
+
+.textBox2{
+    float: left;
+    width: 46.774%; padding-top: 25px;
+}
+#emain2 .imgBox2{
+    width: 53.226%; float: right; height: 267px; margin-bottom: 0; background: url(../img/1234.PNG)no-repeat center/cover;
+}
+#event .tt2{
+    font-size: 3rem; text-align: left; line-height: 32px; margin-top: 25px; margin-right: 3.906%; font-weight: 800; 
+}
+.textBox2 p{
+    font-size: 1.8rem;line-height: 25px; text-align: left; margin-right: 3.906%;  margin-bottom: 25px;
+}
+.textBox2 a{
+    display: block; width: 150px; height: 50px; background-color: #6a318a; font-size: 1.6rem; line-height: 50px; color: #fff; padding: 0 35px; font-weight: 700;
+}
+
+/* sns */
+.content_wrap{
+    width: 80.730%; padding-top: 60px; padding-bottom: 70px;
+}
+#sociallive h2{
+    text-align: left; font-size: 4.5rem; line-height: 45px; letter-spacing: 2px;
+}
+#sociallive h2 span{
+    display: block;
+}
+.CU{
+    height: 246px; margin-top: 15px; width: 56.452%; overflow: hidden; 
+}
+
+.CUmain p{
+    line-height: 36px; font-size: 2.2rem; padding: 0 50px;
+}
+
+
+.blog{
+    margin-top: -60px; height: 319px; width: 35.645%;
+}
+.blogImg{
+    height: 200px; background: url(../img/blog.png) no-repeat top/cover;
+}
+
+.blog .title{
+    width: 100%; position: absolute; bottom: 2%;
+}
+
+.blog .title p{
+    display: block; font-size: 2.2rem; line-height: 30px; padding-top: 5px;
+}
+
+.blog .title .mobile{
+    display: none; 
+}
+
+.facebook{
+    height: 320px; width: 35.483%; clear: both; float: left; margin-top: 40px;
+}
+.facebookImg{
+    height: 200px;
+}
+
+.facebook .title{
+    width: 100%; position: absolute; bottom: 5%;
+}
+
+.facebook .title p{
+    display: block; font-size: 2.2rem; margin-bottom: 10px;
+}
+.facebook .title .mobile{
+    display: none;
+}
+
+.youtube{
+    height: 240px; margin-top: 120px; width: 56.452%;
+}
+.youtubeImg{
+    width: 100%; height: 197px;
+}
+.youtube .title{
+    display: none;
+}
+.youtube .ytt{
+    display: block;
+    width: 100%; text-align: center; font-size: 2.2rem; line-height: 36px; color: #fff;
+}
+
+
+/* detail */
+
+#sociallive .detail{
+    display: block;
+}
+
+.CU .detail{
+    top: 280px; width: 100%; height: 100%; background-color: #fff; padding: 0; position: absolute;
+}
+
+.CU .detail > div{
+    position: absolute; 
+    top: 50%; left: 50%; transform: translate(-50%,-50%); width: 80%; 
+}
+
+.CU .detail p{
+    font-family: 'Inter', sans-serif; text-align: center; line-height: 22px; font-size: 1.8rem; width: 100%; color: #6a318a;
+}
+.CU .detail .title{
+    width: 100%; font-size: 2.1rem; font-weight: 800; top: 10%; color: #6a318a; padding: 0; display: block;
+}
+
+.CU .detail .content{
+    position: relative; width: 100%; margin: 0; padding: 30px; top: 50%;
+}
+.CU .detail .baro{
+    font-size: 1.4rem; text-align: center; 
+}
+
+.CU .detail a{
+    border: 1px solid #6a318a; color: #6a318a; line-height: 28px; height: 30px; width: 100px; 
+    display: block; text-align: center; position: absolute; left: 50%; transform: translateX(-50%);
+}
+
+
+
+
+.facebook .detail{
+    position: absolute; top: 392px; background-color: #fff; height: 100%; width: 100%;
+}
+
+.facebook .detail > div{
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 80%; 
+}
+
+.facebook .detail .ftitle{
+    top: 10%; padding: 0; margin-bottom: 20px;
+    width: 100%; height: 20px;
+    background: url(../img/facebooklogo.png) no-repeat center/contain; text-indent: -9999px;
+}
+.facebook .detail .content{
+    width: 100%; padding: 0; position: relative; text-align: center; color: #3d5b99; width: 100%; line-height: 24px; font-size: 1.8rem;
+}
+.facebook .detail .content:nth-child(3){
+     margin: 20px 0;
+}
+.facebook .detail .baro{
+    width: 100%; height: 30px; font-size: 1.4rem; text-align: center;
+}
+.facebook .detail .baro a{
+    border: 1px solid #3d5b99; color: #3d5b99;
+    position: absolute; width: 100px; height: 30px; left: 50%; transform: translateX(-50%);  line-height: 28px;
+}
+
+.blog .detail{
+    position: absolute; top: 440px; background-color: #fff; height: 100%; width: 100%;
+}
+.blog .detail > div{
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 80%; 
+}
+.blog .detail .btitle{
+    margin-bottom: 20px;
+    width: 100%; height: 25px;
+    background: url(../img/bloglogo.png) no-repeat center/contain; text-indent: -9999px;
+}
+.blog .detail .content{
+    width: 100%; padding: 0 10px; position: relative; text-align: center; color: #00c73c; width: 100%; line-height: 24px; font-size: 1.8rem;
+}
+.blog .detail .content:nth-child(3){
+     margin: 20px 0;
+}
+.blog .detail .baro{
+    width: 100%; height: 30px; font-size: 1.4rem; text-align: center;
+}
+.blog .detail .baro a{
+    border: 1px solid #00c73c; color: #00c73c;
+    position: absolute; width: 100px; height: 30px; left: 50%; transform: translateX(-50%);  line-height: 28px;
+}
+.youtube .detail{
+    position: absolute; top: 270px; background-color: #fff; width: 100%; height: 100%;
+}
+.youtube .detail > div{
+    position: absolute; width: 80%; top: 50%; left: 50%; transform: translate(-50%,-50%);
+}
+.youtube .detail .ytitle{
+    background: url(../img/youtubelogo2.png) no-repeat center/contain; height: 30px; width: 100%; text-indent: -9999px; margin-bottom: 20px;
+}
+.youtube .detail .content{
+    width: 100%; margin-bottom: 20px; position: relative; text-align: center; color: red; width: 100%; line-height: 24px; font-size: 1.8rem;
+}
+.youtube .detail .baro{
+    width: 100%; height: 30px; font-size: 1.4rem; text-align: center; 
+}
+.youtube .detail .baro a{
+    border: 1px solid red; color: red;
+    position: absolute; width: 100px; height: 30px; left: 50%; transform: translateX(-50%);  line-height:28px;
+}
+
+
+
+
+
+/* company */
+#company{
+    padding: 70px 0;
+}
+
+.cmain{
+    width: 70.833%;
+}
+#company h2{
+    margin-bottom: 50px; font-size: 4.5rem; line-height: 45px;
+}
+.csub1,.csub2,.csub3,.csub4{
+    height: 232px; width: 42.647%;
+}
+
+.csub1 .sub,.csub2 .sub{
+    position: absolute; top: 0; height: 232px; width: 42.647%; background-color: #6a318a;
+}
+.csub3 .sub,.csub4 .sub{
+    position: absolute; top: 0; height: 232px; width: 42.647%; background-color: #6a318a; margin-top: 281px;
+}
+
+.csub1 a,.csub2 a,.csub3 a,.csub4 a{
+    font-size: 2.8rem;
+}
+.csub1 p,.csub2 p,.csub3 p,.csub4 p{
+    padding: 30px; line-height: 36px;
+}
+.csub1 .sub a,
+.csub2 .sub a,
+.csub3 .sub a,
+.csub4 .sub a{
+    font-weight: 500; line-height: 60px;
+}
+
+.csub1,.csub2{margin-bottom: 50px;}
+
+
+/* footer */
+.fcontent{
+    width: 80.730%; padding: 50px 0;
+}
+#familysite{
+    margin-bottom: 50px;
+}
+.family1,.family2{
+    float: left;
+}
+.family1{
+    width: 40%; height: 20px; margin: 0;
+}
+.family2{
+    width: 60%; height: 20px; margin: 0;
+}
+.family1 li:first-child{
+    width: 22%;
+}
+.family1 li:nth-child(2){
+    width: 35%
+}
+.family1 li:nth-child(3){
+    width: 40%
+}
+
+#fmenu{
+    width: 100%; margin: 0 auto; text-align: center;
+}
+#fmenu .left{
+    display: inline-block;
+}
+#fmenu li{
+    color: #dfdfdf; font-size: 1.4rem; line-height: 25px; float: left;
+}
+
+#fmenu li:after{
+    content: "|";
+    display: inline-block;
+    margin: 0 5px;
+}
+#fmenu li:last-child:after{
+    content: "";
+    display: inline-block;
+    margin: 0;
+}
+#address{
+    width: 100%; clear: both; margin-right: 0; text-align: center; margin: 15px 0;
+}
+#address p{
+    width: 100%;
+    font-size: 1.6rem; position: relative; display: inline;
+    margin-right: 2px
+}
+
+}
+
+
+
+/* 1024 */
+@media screen and (min-width: 1024px){
+body{
+    font-family:'Nanum Gothic', sans-serif;;
+}
+
+
+header{
+    width: 100%;
+}
+.navwrap{
+    height: 120px; width: 90.039%; margin: 0 auto; position: relative;  
+}
+
+h1{
+    left:0; transform: translateX(50%); top: 0; margin: 0; transform: translateY(20%); height: 80px; overflow: hidden;
+}
+
+h1 img{
+    margin-left: -47px; width: auto; height: 80px;
+}
+/* .roll{
+    bottom: 10px;
+} */
+
+#gnb{float: right; margin-top: 49px; display: block; width: 420px;
+}
+
+#gnb li{float: left; text-align: center; line-height: 22px; font-size: 2.4rem; margin-right: 4.364%;}
+#gnb li:last-child{
+    margin-right: 0;
+}
+#gnb li:hover{
+    border-bottom: 1px solid #000;
+}
+
+#gnb li:last-child{
+    margin-right: 0;
+}
+.mobilebtn{
+    display: none;
+}
+
+.mobilenav{
+    display: none;
+}
+.inner{
+    display: none;
+}
+.innerbtn{
+    display: none;
+}
+
+
+
+#visual{
+    /* padding-top: 200px;  */
+    width: 100%; height: 850px; margin: 0; 
+    /* background: url(../img/slide1.png) no-repeat top right/cover; */
+}
+.mainslide .slideimg a{
+    height: 850px;
+}
+
+
+.maintext{
+    font-size: 7.2rem; line-height: 100px; margin-left: 0.7%; margin-top: 150px;
+}
+.maintext p{
+    font-size: 4.8rem;
+}
+.slide1 .maintext p{
+    font-size: 4rem;
+}
+
+
+
+/* aside */
+#menubar{
+    position: fixed; top: 0; right: 0; width: 60px; height: 100vh; background-color: #afcb3a; z-index: 100;
+}
+#menubar #mainevent{
+    display: block;
+}
+/* #menubar #eventContent{
+    display: block;
+} */
+#mainevent{
+    position: relative;
+    display: block;
+    width: 100%; margin: 0 auto;
+    height: 50%; z-index: 10; cursor: pointer;
+}
+.mevent{
+    position: absolute; display: block; width: 100%; line-height: 20px; font-size: 2rem;
+    transform: rotateZ(90deg); 
+    color: #6a318a; font-weight: 800; margin: 190px auto; 
+}
+.mevent .arrow{
+    float: left; margin-right: 7%; transform: rotateZ(-90deg); width: 20px; height: 20px; border-radius: 50%; line-height: 20px; background-color: #6a318a; color: #fff; text-align: center; font-size: 1.4rem; font-family: 'Gothic A1', sans-serif; padding: 1px;
+}
+.mevent .arrow.on{
+    transform: rotateZ(90deg); padding: 1px;
+}
+.mevent .arrow.off{
+    transform: rotateZ(-90deg);
+}
+.mtt{
+    width: 200px; 
+}
+
+#eventContent{
+    right: 60px; position: fixed; top: 0; width: 531px; height: 508px; overflow: hidden; background-color: #e1e1e1;
+    z-index: 1;
+}
+
+#eventContent .title{
+    width: 100%; height: 70px;
+}
+#eventContent .title p{
+    font-size: 2.4rem; padding-left: 10%; color: #3d3d3d; font-weight: 800; width: 100%; height: 100%; line-height: 70px;
+}
+.eventList{
+    width: 83.804%; margin: 0 auto; padding: 0; height:380px;
+}
+.eventList li{
+    width: 44.743%; height: 162px; display: block; margin: 0px;
+}
+.eventList li:nth-child(1){
+    background: url(../img/12event2.png) no-repeat center/cover; float: left; margin-bottom: 25px;
+}
+.eventList li:nth-child(2){
+    background: url(../img/1234.PNG) no-repeat center/cover; float: right; margin-bottom: 25px;
+}
+.eventList li:nth-child(3){
+    background: url(../img/event3.png) no-repeat center/cover; float: left; margin-bottom: 0;
+}
+.eventList li:nth-child(4){
+    background: url(../img/event4.png) no-repeat center/cover; float: right; margin-bottom: 0;
+}
+.eventMore a{
+    width: 100%; height: 60px; background-color: #6a318a; color:#fff; font-weight: 700; margin: 0 auto; text-align: center; font-size: 1.8rem; line-height: 60px; bottom:0; display: block;
+}
+#menubar #sns .locate,#menubar #sns .you,#menubar #sns .call{
+    width: 60px; height: 60px; background-color: #6a318a; border-radius: 0; margin: 0 auto; border-bottom: 1px solid #fff;
+}
+#menubar #sns .call{
+    border-bottom: none;
+}
+#menubar #sns .locate span{
+    width: 55px; height: 55px; position: relative;
+    background: url(../img/locate.png) no-repeat center/contain; margin: 0px; left: 50%; transform: translateX(-50%); top: 3px;
+}
+#menubar #sns .you span{
+    width: 50px; height: 50px; position: relative; margin: 0; left: 50%; transform: translateX(-50%); top: 5px;
+}
+#menubar #sns .call span{
+    width: 40px; height: 40px; position: relative; margin: 0; left: 50%; transform: translateX(-50%); top: 10px;
+}
+#menubar #sns .locate span:hover{
+    text-indent: 0; text-align: center; color: #fff; font-size: 1.6rem; line-height: 20px; font-weight: 700; background: #6a318a; width: 70%; height: auto; top: 10px; margin: 0;
+}
+#menubar #sns .you span:hover{
+    text-indent: 0; text-align: center; color: #fff; font-size: 1.6rem; line-height: 20px; font-weight: 700; background: #6a318a; width: 70%; height: auto; top: 10px; margin: 0;
+}
+#menubar #sns .call span:hover{
+    text-indent: 0; text-align: center; color: #fff; font-size: 1.6rem; line-height: 20px; font-weight: 700; background: #6a318a; margin: 0;
+}
+
+
+
+/* Fresh&Refresh service */
+#service{
+    padding: 70px 0 80px ;
+}
+.serviceInner > div{
+    width: 83.008%; margin: 0 auto;
+}
+#service h2{
+    margin-bottom: 65px; text-align: center; font-size: 5.7rem; font-weight: 800; line-height: 57px;
+}
+.iconsub > li{
+    padding-bottom: 65px;
+}
+.iconsub span{
+    width: 267px; height: 267px; font-size: 2.2rem; margin-left: 0; line-height: 30px; padding: 110px 30px; margin-top: 0; 
+}
+/* .iconsub .ic3 span{
+    margin-top: 0px;
+} */
+.iconsub .ic1 a{
+    width: 267px; height: 267px;
+}
+.iconsub .ic2 a{
+    width: 267px; height: 267px;
+}
+.iconsub .ic3 a{
+    width: 267px; height: 267px;
+}
+.iconsub .ic4 a{
+    width: 267px; height: 267px;
+}
+.iconsub .ic5 a{
+    width: 267px; height: 267px;
+}
+.iconsub .ic6 a{
+    width: 267px; height: 267px;
+}
+.iconsub .ic7 a{
+    width: 267px; height: 267px;
+}
+.iconsub .ic8 a{
+    width: 267px; height: 267px;
+}
+.iconsub .ic9 a{
+    width: 267px; height: 267px;
+}
+
+#event{
+    padding-bottom: 80px;
+}
+#event h2{
+    margin-bottom: 32px; font-size: 5.7rem; line-height: 57px;
+}
+#event .title{
+    font-size: 2.8rem; line-height: 28px; margin-bottom: 60px;
+}
+#emain1,#emain2{
+    width: 80.008%; 
+}
+#emain1 .imgBox1{
+    width: 52.941%; height: 370px; margin-bottom: 50px;
+}
+.textBox1{
+    width: 47.059%;
+}
+#event .tt1{
+    font-size: 3.8rem; line-height: 45px;
+    padding-left: 6.235%; 
+    margin-bottom: 20px;
+}
+.textBox1 p{
+    font-size: 2.2rem; line-height: 30px; padding-left: 6.235%;
+}
+.textBox1 a,.textBox2 a{
+    width: 200px; text-align: center; font-size: 1.8rem;
+}
+.textBox1 a{
+    margin-left: 6.235%;
+}
+
+#emain2 .imgBox2{
+    width: 52.941%; height: 370px; margin-bottom: 0;
+}
+.textBox2{
+    width: 47.059%; padding-top: 40px;
+}
+#event .tt2{
+    font-size: 3.8rem; line-height: 45px; margin-top: 30px; margin-right: 5.882%;
+}
+.textBox2 p{
+    font-size: 2.2rem; line-height: 30px; margin-right: 5.882%; margin-bottom: 35px;
+}
+
+
+
+/* sns */
+.content_wrap{
+    width: 83.008%; padding: 110px 0 100px ;
+}
+#sociallive h2{
+    font-size: 5.7rem; line-height: 60px; letter-spacing: 3px; float: left;
+}
+.CU{
+    width: 41.176%; clear: both; position: absolute; left: 50%; transform: translateX(-50%); margin-top: 72px
+}
+
+.CUmain {
+    height: 246px;
+}
+.CUmain p{
+    font-size: 2.4rem; line-height: 48px;
+}
+
+
+
+
+.blog{
+    height: 319px; width: 26%; float: right; margin-top: 0px;
+}
+.blogImg{
+    height: 185px; background: url(../img/blog.png) no-repeat top/cover;
+}
+.blog .title{
+    bottom: 0; padding: 0;
+}
+.blog .title p{
+    padding: 19px;
+}
+
+.facebook{
+    height: 319px; width: 26%; margin-top: -55px;
+}
+.facebookImg{
+    height: 207px;
+}
+.facebook .title{
+    width: 100%; position: absolute; bottom: 0; transform: translateY(-30%);
+}
+.facebook .title p{
+    display: block; font-size: 2.4rem; margin-bottom: 10px;
+}
+
+.youtube{
+    float: left; margin-left: 3.529%; width: 50.823%; height: 245px; margin-top: 18px; 
+}
+.youtubeImg{
+    width: 100%; height: 245px; background: url(../img/youtubethumnail.png) no-repeat center/cover;
+}
+.youtube .ytt{
+    display: none;
+}
+
+
+/* detail */
+
+.CU .detail{
+    width: 100%;
+}
+.CU .detail p{
+    font-size: 2.1rem; line-height: 31px;
+}
+.CU .detail .content{
+    padding: 20px 0;
+}
+.CU .detail .baro{
+    font-size: 1.8rem
+}
+.CU .detail a{
+    width: 110px;
+}
+
+.facebook .detail > div{
+    width: 85%;
+}
+.facebook .detail .ftitle{
+    margin-bottom: 15px;
+}
+.facebook .detail .content{
+    font-size: 2.1rem; line-height: 28px;
+}
+.facebook .detail .content:nth-child(3){
+    margin: 15px 0;
+}
+.facebook .detail .baro{
+    font-size: 1.8rem
+}
+.facebook .detail a{
+    width: 110px;
+}
+
+.blog .detail .content{
+    font-size: 2.1rem; padding: 0; line-height: 26px;
+}
+.blog .detail .baro{
+    font-size: 1.8rem
+}
+.blog .detail a{
+    width: 110px;
+}
+
+
+.youtube .detail .ytitle{
+    height: 32px;
+}
+.youtube .detail .content{
+    font-size: 2.1rem; line-height: 33px;
+}
+.youtube .detail .baro{
+    font-size: 1.8rem
+}
+.youtube .detail a{
+    width: 110px;
+}
+
+
+
+/* company */
+#company{
+    padding: 70px 0 100px 0;
+}
+
+#company h2{
+    font-size: 5.7rem; line-height: 57px; margin-bottom: 65px;
+}
+.cmain{
+    width: 83.003%;
+}
+.csub1,.csub2,.csub3,.csub4{
+    height: 200px; width: 23.529%; margin-left: 1.471%;
+}
+.csub1 p,.csub2 p,.csub3 p,.csub4 p{
+    padding: 20px; line-height: 36px;
+}
+
+.csub1 .sub,.csub2 .sub{
+    top: 0; height: 200px; width: 23.529%; background-color: #6a318a; 
+    /* display: none; */
+}
+.csub3 .sub,.csub4 .sub{
+    top: 0; height: 200px; width: 23.529%; background-color: #6a318a; margin-top: 0px;
+    /* display: none; */
+}
+.csub1 .sub a,
+.csub2 .sub a,
+.csub3 .sub a,
+.csub4 .sub a{
+    font-size: 2.4rem;
+    font-weight: 400; line-height: 48px;
+}
+
+
+
+
+/* footer */
+
+footer .fcontent{
+    width: 83.008%;
+    padding: 42px 0;
+}
+#familysite{
+    margin-bottom: 0px;
+}
+.family1,.family2{
+    height: 30px;
+}
+#fmenu{
+    margin-top: 32px;
+}
+#fmenu li{
+    font-size: 1.8rem; line-height: 30px;
+}
+#address p{
+    font-size: 1.8rem; margin: 18px 0;
+}
+.copy{
+    font-size: 1.8rem;
+}
+
+}
+
+
+
+
+/* 1920 */
+@media screen and (min-width: 1300px){
+
+
+.navwrap{
+    width: 1150px; margin: 0 auto;
+}
+
+/* #visual{
+    padding-top: 180px;
+} */
+.mainslide .slideimg a{
+    height: 850px;
+}
+
+.maintext{
+    padding-top: 120px; padding-left: 1.2%; font-size: 8rem; line-height: 110px; margin: 0 auto; 
+}
+.maintext span{
+    display: block;
+}
+
+/* aside */
+
+
+
+
+
+/* service */
+#service{
+    padding: 85px 0 110px 0;
+}
+.serviceInner > div{
+    width: 1250px; margin: 0 auto;
+}
+#service h2{
+    font-size: 6rem; line-height: 60px; margin-bottom: 60px;
+}
+.iconsub > li{
+    width: 24%
+}
+/* .iconsub li:nth-child(4){
+    display: block;
+} */
+.iconsub .ic1 a{
+    width: 290px; height: 290px;
+}
+.iconsub .ic2 a{
+    width: 290px; height: 290px;
+}
+.iconsub .ic3 a{
+    width: 290px; height: 290px;
+}
+.iconsub .ic4 a{
+    width: 290px; height: 290px;
+}
+.iconsub .ic5 a{
+    width: 290px; height: 290px;
+}
+.iconsub .ic6 a{
+    width: 290px; height: 290px;
+}
+.iconsub .ic7 a{
+    width: 290px; height: 290px;
+}
+.iconsub .ic8 a{
+    width: 290px; height: 290px;
+}
+.iconsub .ic9 a{
+    width: 290px; height: 290px;
+} 
+
+.iconsub span{
+    width: 290px; height: 290px; margin-top: 0; font-size: 3rem; margin-left: 0; line-height: 40px; padding: 120px 50px;
+}
+.iconsub .ic3 span{
+    padding-top: 100px;
+}
+.iconsub .ic4 span{
+    padding-top: 110px;
+}
+
+
+/* event */
+#event{
+    padding-bottom: 100px;
+}
+#event h2{
+    margin-bottom: 30px; font-size: 6rem; line-height: 60px;
+}
+#event .title{
+    font-size: 3rem; line-height: 30px; margin-bottom: 80px;
+}
+#emain1,#emain2{
+    width: 1150px; margin: 0 auto;
+}
+#emain1 .imgBox1{
+    width: 55.652%; height: 370px; margin-bottom: 80px; background: url(../img/12event2.png) no-repeat center/cover;
+}
+.textBox1{
+    width: 44.348%;
+}
+#event .tt1{
+    font-size: 4rem; line-height: 52px;
+    padding-left: 10%; 
+    margin-bottom: 25px; margin-top: 30px;
+}
+.textBox1 p{
+    padding-left: 10%; margin-bottom: 45px;
+}
+.textBox1 a{
+    margin-left: 10%;
+}
+#emain2 .imgBox2{
+    width: 55.652%; height: 370px; background: url(../img/1234.PNG) no-repeat center/cover;
+}
+.textBox2{
+    width: 44.348%; padding-top: 55px;
+}
+#event .tt2{
+    font-size: 4rem; line-height: 40px; margin-top: 0; margin-bottom: 30px; margin-right: 6%; letter-spacing: -3px;
+}
+.textBox2 p{
+    margin-right: 6%; margin-bottom: 50px;
+}
+
+
+
+/* sns */
+.content_wrap{
+    width: 1150px; margin: 0 auto;
+}
+#sociallive h2{
+    font-size: 6rem; line-height: 60px;
+}
+.CU{
+    width: 34.783%; height: 280px; margin-top: 0; margin-left: 1.8%
+}
+.CUmain{
+    height: 280px;
+}
+
+
+
+
+.blog{
+    height: 440px; width: 26.174%;
+}
+.blog .title{
+    bottom: 20px;
+}
+.blog .title p{
+    line-height: 36px;
+}
+.blogImg{
+    height:300px;
+}
+
+.facebook{
+    width: 23.478%; height: 392px; margin-top: -240px;
+}
+.facebookImg{
+    height: 280px;
+}
+
+.youtube{
+    width: 41.652%; height: 270px; margin-top: -115px; margin-left: 4.348%;
+}
+.youtubeImg{
+    background: url(../img/youtubethumnail.png) no-repeat center/cover; height: 100%;
+}
+
+
+.CU .detail .title{
+    font-size: 2.8rem; line-height: 24px;
+}
+.CU .detail p{
+    font-size: 2.4rem; line-height: 36px; 
+}
+.blog .detail > div{
+    width: 75%;
+}
+.blog .detail .btitle{
+    height: 32px;
+}
+.blog .detail .content{
+    font-size: 2.4rem; padding: 0; line-height: 32px; 
+}
+
+.youtube .detail .ytitle{
+    height: 34px;
+}
+.youtube .detail .content{
+    font-size: 2.4rem; line-height: 38px;
+}
+.facebook .detail .ftitle{
+    height: 23px;
+}
+.facebook .detail > div{
+    width: 80%;
+}
+.facebook .detail .content{
+    font-size: 2.4rem; line-height: 32px;
+}
+
+
+
+
+
+
+/* company */
+#company{
+    padding: 85px 0 50px 0;
+}
+#company h2{
+    margin-bottom: 70px; font-size: 6rem; line-height: 60px;
+}
+.cmain{
+    width: 1250px; margin: 0 auto;
+}
+.csub1,.csub2,.csub3,.csub4{
+    height: 290px;
+}
+.csub1 p,.csub2 p,.csub3 p,.csub4 p{
+    padding: 25px; line-height: 36px; font-size: 30px;
+}
+.csub1 .sub,.csub2 .sub{
+    top: 0; height: 290px; width: 23.529%; background-color: #6a318a; 
+    /* display: block; */
+}
+.csub3 .sub,.csub4 .sub{
+    top: 0; height: 290px; width: 23.529%; background-color: #6a318a; margin-top: 0px; 
+    /* display: block; */
+}
+
+
+.csub1 .sub a,
+.csub2 .sub a,
+.csub3 .sub a,
+.csub4 .sub a{
+    font-size: 2.4rem;
+    font-weight: 400; line-height: 100px;
+    
+}
+
+
+/* footer */
+footer .fcontent{
+    width: 1250px; margin: 0 auto; padding: 50px 0;
+}
+#fmenu{
+    margin-top: 35px;
+}
+
+}
+
+
+
+
+
+
+
+
+/* brand.html */
+/* brandmobile */
+#banner{
+    background: url(../img/bnr_01.jpg)no-repeat center/cover; height: 160px; width: 100%; margin-top: 75px;
+}
+
+
+#info{
+    width: 100%; position: relative; 
+}
+
+.infoinner{
+    width: 73.867%; margin: 0 auto;
+}
+.nicetocu{
+    height: 60px; width: 100%; text-align: center; margin: 45px 0 25px;
+}
+.nicetocu text tspan {
+    font-size: 3.2rem;
+    fill:transparent;
+    stroke-width: 2px;
+    stroke:#000;
+    stroke-dasharray: 280px;
+    stroke-dashoffset: 280px;
+    animation: nice 2s linear forwards;
+}
+/* .nicetocu text tspan:nth-of-type(1) {animation-delay:0s;}*/
+@keyframes nice {
+    0% {stroke-dashoffset:280px;}
+    30% {fill:transparent;}
+    70% { stroke-dashoffset: 0; fill: #000;}
+    100% {stroke-dashoffset:0; fill: black;}
+}
+/* .infoinner h2{
+    margin-bottom: 35px; text-align: center; font-size: 3.2rem; font-weight: 800; line-height: 32px;
+} */
+.infoinner p{
+    font-size: 1.8rem; line-height: 30px; margin-bottom: 50px; text-align: center; font-weight: 700; word-break: keep-all;
+}
+#brandStory{
+    width: 100%; position: relative;
+}
+
+.bstitle{
+    width: 82.667%; margin: 0 auto; position: relative;
+}
+.bstitle h2{
+    font-size: 2.2rem; line-height: 30px;  font-weight: 700; text-align: center;
+}
+.bstitle .arrow{
+    background: url(../img/arrow.jpg) no-repeat center/contain; width: 90px; height: 45px; display: block; margin: 20px auto;
+}
+.koreacu{
+    position: relative;
+}
+.koreacu .bg{
+    width: 100%; height: 522px; background: url(../img/bnr_02.jpg)no-repeat top/cover; 
+    float: left; opacity: 0.7; position: absolute;
+}
+.koreacu .koreainner{
+    width: 83%; height: 522px; position: relative; margin: 0 auto; padding: 30px 0;
+}
+.korea{
+    position: absolute;
+}
+.korea text tspan {
+    font-size: 2rem;
+    fill:transparent;
+    stroke-width: 1px;
+    stroke:#6a318a;
+    stroke-dasharray: 250px;
+    stroke-dashoffset: 250px;
+    animation: ko 2s linear forwards;
+}
+/* .nicetocu text tspan:nth-of-type(1) {animation-delay:0s;}*/
+@keyframes ko {
+    0% {stroke-dashoffset: 250px;}
+    50% {fill:transparent;}
+    100% {stroke-dashoffset:0; fill: #6a318a;}
+}
+.korea text tspan:nth-of-type(2),
+.korea text tspan:nth-of-type(3){
+    stroke-dasharray: 400px;
+    stroke-dashoffset: 400px;
+    animation-name: ko2;
+    animation-duration:2s;
+}
+
+@keyframes ko2 {
+    0% {stroke-dashoffset:400px;}
+    30% {fill:transparent;}
+    100% {stroke-dashoffset:0; fill: #6a318a;}
+}
+/* .koreainner h2{
+    text-align: center; font-size: 2rem; font-weight: 800; line-height: 20px; color: #6a318a; display: block; margin-bottom: 20px;
+} */
+.koreainner p{
+    font-size: 1.4rem; line-height: 24px; color: #fff; text-align: center; margin-bottom: 30px; word-break: keep-all; padding-top: 70px;
+}
+.koreainner .kcircle{
+    width: 100%; 
+}
+.kcircle li{
+    transform: translateY(100px); transition: all 0.4s; opacity: 0;
+}
+
+.kcircle .c1{
+    width: 145px; height: 145px; border-radius: 50%; background-color: #6a318a; margin: 0 auto;
+    /* 추가 */
+    transform: translateY(100px); transition: all 0.4s; opacity: 0;
+}
+.kcircle .c1.active{
+    transform: translateY(0); opacity: 1;
+}
+
+.kcircle .c1 a,.kcircle .c2 a,.kcircle .c3 a{
+    display: block; font-size: 1.8rem; font-weight: 700; line-height: 25px; text-align: center; color: #fff; height: 100%; position: relative; padding: 50px 20px;
+}
+.kcircle .c2{
+    width: 145px; height: 145px; border-radius: 50%; background-color: #6a318a; float: left;
+    /* 추가 */
+    transform: translateY(100px); transition: all 0.7s; opacity: 0;
+}
+.kcircle .c2.active{
+    transform: translateY(0); opacity: 1;
+}
+.kcircle .c3{
+    width: 145px; height: 145px; border-radius: 50%; background-color: #6a318a; float: right;
+    /* 추가 */
+    transform: translateY(100px); transition: all 1.1s; opacity: 0;
+}
+.kcircle .c3.active{
+    transform: translateY(0); opacity: 1;
+}
+.storyinner{
+    width: 81.333%; margin: 50px auto; position: relative; margin-bottom: 0;
+}
+.differ{
+    margin: 0 0 15px 0; position: absolute;
+}
+.bdiffer{
+    width: 100%;
+}
+.differ text tspan {
+    font-size: 2rem;
+    fill:transparent;
+    stroke-width: 1px;
+    stroke:#6a318a;
+    stroke-dasharray: 300px;
+    stroke-dashoffset: 300px;
+    animation: di 2s linear forwards;
+}
+/* .nicetocu text tspan:nth-of-type(1) {animation-delay:0s;}*/
+@keyframes di {
+    0% {stroke-dashoffset: 300px;}
+    30% {fill:transparent;}
+    70% {stroke-dashoffset: 0; fill: #6a318a;}
+    100% {stroke-dashoffset:0; fill: #6a318a;}
+}
+/* .bdiffer h2{
+    font-size: 2rem;  line-height: 20px; text-align: center; color: #6a318a; margin-bottom: 20px;
+} */
+.bdiffer > div > p{
+    font-size: 1.4rem;line-height: 24px; text-align: center; margin-bottom: 35px; word-break: keep-all; padding-top: 60px;
+}
+.bdiffer .bdifferCircle{
+    width: 100%; display: block; margin: 0 auto;
+}
+.bdifferCircle li{
+    width: 140px; height: 140px; border-radius: 50%; background-color: #f7f7f7; color: #6a318a; border: 3px solid #6a318a; margin-bottom: 50px;
+}
+.bdifferCircle li a{
+    display: block; height: 100%; position: relative; font-size: 1.8rem; line-height: 20px; font-weight: 800; text-align: center;
+}
+.bdifferCircle li p{
+    position: absolute; top: 50%; transform: translateY(-50%); width: 100%; padding: 10px;
+}
+.bdifferCircle .bc1,
+.bdifferCircle .bc3{
+    float: left; 
+    transform: translateY(100px); transition: all 0.5s; opacity: 0;
+}
+.bdifferCircle .bc1.active,
+.bdifferCircle .bc2.active,
+.bdifferCircle .bc3.active,
+.bdifferCircle .bc4.active{
+    transform: translateY(0); opacity: 1;
+}
+.bdifferCircle .bc3{
+    clear: both;
+}
+.bdifferCircle .bc2,
+.bdifferCircle .bc4{
+    float: right; 
+    transform: translateY(100px); transition: all 0.5s; opacity: 0;
+}
+.bdifferCircle .bc1,
+.bdifferCircle .bc2{
+    margin-bottom: 30px;
+}
+.bdifferCircle .bc1:hover{
+    background-color: #6a318a; color: #fff; transform: translateY(-15%); transition: all 0.3s;
+}
+.bdifferCircle .bc2:hover{
+    background-color: #6a318a; color: #fff; transform: translateY(-15%); transition: all 0.3s;
+}
+.bdifferCircle .bc3:hover{
+    background-color: #6a318a; color: #fff; transform: translateY(-15%); transition: all 0.3s;
+}
+.bdifferCircle .bc4:hover{
+    background-color: #6a318a; color: #fff; transform: translateY(-15%); transition: all 0.3s;
+}
+.DLP{
+    width: 100%;
+}
+.DLPtitle {
+    width: 82.667%; margin: 0 auto; position: relative;
+}
+.dlptitle{
+    position: absolute;
+}
+.dlptitle text tspan {
+    font-size: 2rem;
+    fill:transparent;
+    stroke-width: 1px;
+    stroke:#6a318a;
+    stroke-dasharray: 220px;
+    stroke-dashoffset: 220px;
+    animation: dlptitle 2s linear forwards;
+}
+
+@keyframes dlptitle {
+    0% {stroke-dashoffset: 220px;}
+    20% {fill:transparent;}
+    100% {stroke-dashoffset:0; fill: #6a318a;}
+}
+/* .DLP h2{
+    font-size: 2rem;  line-height: 20px; text-align: center; color: #6a318a; margin-bottom: 20px; font-weight: 800;
+} */
+.DLPtitle p{
+    font-size: 1.4rem;line-height: 20px; text-align: center; margin-bottom: 35px; word-break: keep-all; padding-top: 60px;
+}
+.DLP .moplatform{
+    width: 100%; background-color: #afcb3a; height: 210px; padding-top: 25px;
+}
+.platinner{
+    width: 87%; margin: 0 auto;
+}
+.pform1{
+    width: 100px;
+    display: block; float: left; margin: 0 auto;
+}
+.pform1 .fc1{
+    height: 98px; width: 98px; border-radius: 50%; background: url(../img/refresh_bg04.jpg)no-repeat center/cover; display: block;
+}
+.pform2{
+    width: 100px; display: block; float: left; position: absolute; left: 50%; transform: translateX(-50%);
+}
+.pform2 .fc2{
+    height: 98px; width: 98px; border-radius: 50%; background: url(../img/refresh_bg05.jpg)no-repeat center/cover; display: block;
+}
+.pform3{
+    width: 100px; display: block; float: right;
+}
+.pform3 .fc3{
+    height: 98px; width: 98px; display: block; border-radius: 50%; background: url(../img/refresh_bg06.jpg)no-repeat center/cover;
+}
+.ftext p{
+    line-height: 22px; font-size: 1.6rem; text-align: center; height: 100px; background-color:#afcb3a; color: #fff;
+    /* display: none; */
+    margin-top: -98px;
+}
+.pform1 .ftext p,
+.pform2 .ftext p,
+.pform3 .ftext p{
+    display: none;
+}
+.pform2 .ftext p{
+    margin-top: -98px; line-height: 25px;
+}
+.ftext b{
+    text-align: center; display: block; font-size: 1.6rem; line-height: 20px; margin-top: 20px; word-break: keep-all;
+}
+
+#BI{
+    margin: 50px 0 50px 0; width: 100%;
+}
+.BIinner{
+    width: 82.667%; margin: 0 auto;
+}
+.BIinner h2{
+    font-size: 2rem;  line-height: 20px; text-align: center; color: #6a318a; margin-bottom: 35px; font-weight: 700;
+}
+.BImenu{
+    position: relative;
+}
+.BImenu .slogan{
+    display: block; text-align: center;
+}
+.BImenu span:hover{
+    border-bottom: 1px solid #333;
+}
+.slogan a{
+    display: block; background: url(../img/brand_story.png)no-repeat center top/contain; background-size: auto 50px; padding-top: 50px;
+}
+.slogan span{
+    font-size: 1.4rem; font-family: 'Inter', sans-serif; text-align: center; line-height: 50px;
+}
+.BImenu .wm{
+    position: absolute; margin-top: 120px; width: 33.333%; text-align: center;
+}
+.wm a{
+    display: block; background: url(../img/brandculogo.png)no-repeat center top/contain; background-size: auto 48px; padding-top: 50px;
+}
+.wm span{
+    font-size: 1.4rem; font-family: 'Inter', sans-serif; line-height: 50px; 
+}
+.BImenu .CP{
+    position: relative; display: block; width: 33.333%; margin-top: 20px; float: left; left: 50%; transform: translateX(-50%); text-align: center;
+}
+.CP a{
+    display: block; background: url(../img/colorpalette.png)no-repeat center top/contain; background-size: auto 48px; padding-top: 50px;
+}
+.CP span{
+    font-size: 1.4rem; font-family: 'Inter', sans-serif; line-height: 50px; 
+}
+.BImenu .app{
+    position: relative; display: block; width: 33.333%; float: right; margin-top: 20px; text-align: center;
+}
+.app a{
+    display: block; background: url(../img/membershipcard.png)no-repeat center top/contain; background-size: auto 48px; padding-top: 50px;
+}
+.app span{
+    font-size: 1.4rem; font-family: 'Inter', sans-serif; line-height: 50px;
+}
+
+
+
+
+
+/* 768 */
+@media screen and (min-width: 768px){
+#banner{
+    height: 300px; width: 100%; margin-top: 80px;
+}
+#info{
+    margin: 0 0 70px 0;
+}
+.infoinner{
+    width: 80.729%; 
+}
+.nicetocu{
+    height: 60px; text-align: center; width: 100%; margin: 70px 0 40px 0;
+}
+.nicetocu text tspan {
+    font-size: 4.5rem;
+}
+/* .infoinner h2{
+    font-size: 4.5rem; line-height: 45px; margin-bottom: 50px;
+} */
+.infoinner p{
+    font-size: 2.5rem; line-height: 36px; margin-bottom: 0; font-weight: 700;
+}
+.bstitle{
+    width: 80.729%;
+}
+.bstitle h2{
+    font-size: 3.5rem; line-height: 35px;
+}
+.bstitle .arrow{
+    margin: 35px auto;
+}
+.koreacu .bg{
+    height: 529px;
+}
+.koreacu .koreainner{
+    width: 80.729%; height: 529px; padding: 40px 0;
+}
+.korea text tspan {
+    font-size: 2.8rem;
+    stroke-width: 2px;
+}
+/* .koreainner h2{
+    font-size: 2.8rem;  line-height: 28px; margin-bottom: 30px;
+} */
+.koreainner p{
+    font-size: 1.8rem; line-height: 28px; margin-bottom: 50px; font-weight: 700; margin-top: 10px;
+}
+.kcircle .c1{
+    width: 200px; height: 200px; float: left;
+}
+.kcircle .c1 a{
+    font-size: 2.2rem; line-height: 32px; padding: 80px 20px;
+}
+.kcircle .c2 a,.kcircle .c3 a{
+    font-size: 2.2rem; line-height: 32px; padding: 70px 20px;
+}
+.kcircle .c2{
+    width: 200px; height: 200px; clear: both; position: absolute; left: 50%; 
+    margin-left: -100px;
+}
+.kcircle .c3{
+    width: 200px; height: 200px;
+}
+.storyinner{
+    width: 80.729%; margin-top: 70px;
+}
+.bdiffer{
+    width: 85.806%; margin: 0 auto; position: relative;
+}
+.differ{
+    margin: 0 0 25px 0;
+}
+.differ text tspan {
+    font-size: 2.8rem;
+    stroke-width: 2px;
+}
+/* .bdiffer h2{
+    font-size: 2.8rem; line-height: 28px; margin-bottom: 30px;
+} */
+.bdiffer > div >p{
+    font-size: 1.8rem; line-height: 32px; font-weight: 700; margin-bottom: 50px;
+}
+
+.bdifferCircle li{
+    width: 220px; height: 220px; margin-bottom: 70px; border: 4px solid #6a318a;
+}
+.bdifferCircle li a{
+    font-size: 2.2rem; line-height: 28px;
+}
+.bdifferCircle .bc1,
+.bdifferCircle .bc2{
+    margin-bottom: 50px;
+}
+.DLP .DLPtitle{
+    width: 80.729%;    
+}
+.dlptitle text tspan {
+    font-size: 2.8rem;
+    stroke-width: 2px;
+}
+/* .DLP h2{
+    font-size: 2.8rem; line-height: 28px; margin-bottom: 35px;
+} */
+.DLP > div > p{
+    font-size: 1.8rem; line-height: 28px; font-weight: 700; margin-bottom: 50px;
+}
+.DLP .moplatform{
+    width: 80.729%; margin: 0 auto; padding-top: 0; height: 380px; background-color: #fff;
+}
+.platinner{
+    width: 100%; position: relative;
+}
+
+
+.pform1,.pform2,.pform3{
+    width: 32%; height: 380px; background-color: #afcb3a; 
+}
+.pform2{
+    margin-right: 2%;
+}
+.pform1 .fc1,.pform2 .fc2,.pform3 .fc3{
+    width: 170px; height: 170px; position: relative; left: 50%; transform: translateX(-50%); margin-top: 30px;
+}
+.ftext{
+    margin-top: 35px;
+}
+.ftext p{
+    line-height: 24px; font-size: 1.8rem; display: block; text-align: center; width: 87%; margin: 0 auto; color: #000; height: auto;
+}
+.pform2 .ftext p{
+    margin-top: 0;
+}
+.pform1 .ftext p,
+.pform2 .ftext p,
+.pform3 .ftext p{
+    display: block;
+}
+.ftext b{
+    margin-top: 15px; font-size: 2.3rem; line-height: 32px; display: inline-block; position: relative; text-align: center; left: 50%; transform: translateX(-50%);
+}
+
+
+
+#BI{
+    margin-bottom: 75px;
+}
+
+.BIinner{
+    width: 69.271%; margin: 0 auto;
+}
+.BIinner h2{
+    font-size: 2.8rem; line-height: 28px;
+}
+.BImenu .wm{
+    position: relative; margin-top: 0px; width: 30%; display: inline-block;
+}
+
+.wm a{
+    background-size: auto 65px; padding-top: 65px;
+}
+.wm span{
+    font-size: 2rem; line-height: 60px; 
+}
+.BImenu .slogan{
+    width: 70%; float: right;
+}
+.slogan a{
+    background-size: auto 65px; padding-top: 65px;
+}
+.slogan span{
+    font-size: 2rem; line-height: 60px; 
+}
+.BImenu .CP{
+    position: relative; display: block; margin-top: 35px; float: left; width: 50%; left: 0; transform: translateX(0);
+}
+.CP a{
+    background-size: auto 65px; padding-top: 65px;
+}
+.CP span{
+    font-size: 2rem; line-height: 60px; 
+}
+.BImenu .app{
+    margin-top: 35px; width: 50%;
+}
+.app a{
+    background-size: auto 65px; padding-top: 65px;
+}
+.app span{
+    font-size: 2rem; line-height: 60px; 
+}
+
+
+}
+
+
+
+
+
+/* 1024 */
+@media screen and (min-width: 1024px){
+#banner{
+    margin-top: 0; height: 380px;
+}
+#info{
+    margin: 0 0 85px 0;
+}
+.infoinner{
+    width: 74.609%;
+}
+.nicetocu{
+    height: 60px; width: 100%; text-align: center; margin: 70px 0 65px 0;
+}
+.nicetocu text tspan {
+    font-size: 5.7rem;
+}
+/* .infoinner h2{
+    font-size: 5.7rem; line-height: 57px; margin-bottom: 65px;
+} */
+.infoinner p{
+    font-size: 3.2rem; line-height: 48px;
+}
+.bstitle{
+    width: 83.008%;
+}
+.bstitle h2{
+    font-size: 4.7rem; line-height: 47px;
+}
+.koreacu .bg{
+    height: 611px;
+}
+.koreacu .koreainner{
+    width: 83.008%; height: 611px; padding: 50px 0;
+}
+.korea text tspan {
+    font-size: 3.7rem;
+    stroke-width: 3px;
+}
+/* .koreainner h2{
+    font-size: 3.7rem;  line-height: 37px; margin-bottom: 35px;
+} */
+.koreainner p{
+    font-size: 2.2rem; line-height: 36px; margin-bottom: 65px;
+}
+.kcircle .c1{
+    width: 260px; height: 260px;
+}
+.kcircle .c1 a{
+    font-size: 3rem; line-height: 36px; padding: 110px 20px;
+}
+.kcircle .c2 a,.kcircle .c3 a{
+    font-size: 3rem; line-height: 36px; padding: 100px 20px;
+}
+.kcircle .c2,.kcircle .c3{
+    width: 260px; height: 260px;
+}
+.kcircle .c2{
+    margin-left: -130px;
+}
+.storyinner{
+    width: 83.008%;
+}
+.bdiffer{
+    width: 100%;
+}
+.differ{
+    margin: 0 0 65px 0;
+}
+.differ text tspan {
+    font-size: 3.7rem;
+    stroke-width: 3px;
+}
+/* .bdiffer h2{
+    font-size: 3.7rem;  line-height: 37px; margin-bottom: 35px;
+} */
+.bdiffer > div >p{
+    font-size: 2.2rem; line-height: 36px; margin-bottom: 65px;
+}
+.bdifferCircle li{
+    width: 260px; height: 260px; border: 4px solid #6a318a;
+}
+.bdifferCircle .bc1{
+    left: 50%; transform: translate(-50%,100px); position: relative; 
+}
+.bdifferCircle .bc1:hover{
+    transform: translate(-50%,-15%);
+}
+.bdifferCircle .bc2{
+    float: left; display: block; clear: both; margin-top: -120px;
+}
+.bdifferCircle .bc3{
+    float: right; margin-top: -120px; clear: none;
+}
+.bdifferCircle .bc4{
+    clear: both; float: left; position: relative; left: 50%; transform: translate(-50%,100px); margin-top: -150px;
+}
+.bdifferCircle .bc1.active,
+.bdifferCircle .bc4.active{
+    transform: translate(-50%,0); opacity: 1;
+}
+.bdifferCircle .bc1:hover{
+    transform: translate(-50%,-15%);
+}
+.bdifferCircle .bc4:hover{
+    transform: translate(-50%,-15%);
+}
+.bdifferCircle li a{
+    font-size: 3rem; line-height: 36px; 
+}
+.bdifferCircle li p{
+    padding: 20px; word-break: keep-all;
+}
+.DLP .DLPtitle{
+    width: 74.609%;    
+}
+.dlptitle text tspan {
+    font-size: 3.7rem;
+    stroke-width: 3px;
+}
+/* .DLP h2{
+    font-size: 3.7rem; line-height: 37px;
+} */
+.DLP > div > p{
+    font-size: 2.2rem; line-height: 36px; margin-bottom: 65px;
+}
+.DLP .moplatform{
+    width: 83.008%; padding-top: 0; height: 500px; background-color: #fff;
+}
+.pform1,.pform2,.pform3{
+    height: 500px;
+}
+.pform1 .fc1,.pform2 .fc2,.pform3 .fc3{
+    width: 240px; height: 240px; margin-top: 40px;
+}
+.ftext{
+    margin-top: 40px;
+}
+.ftext p{
+    line-height: 28px; font-size: 2.2rem; display: block; text-align: center; width: 87%; margin: 0 auto;
+}
+.pform2 .ftext{
+    margin-top: 55px;
+}
+.ftext b{
+    margin-top: 20px; font-size: 2.8rem; line-height: 28px;
+}
+.pform2 .ftext b{
+    margin-top: 35px;
+}
+#BI{
+    margin-top: 70px; margin-bottom: 90px;
+}
+.BIinner{
+    width: 83.008%; margin: 0 auto;
+}
+.BIinner h2{
+    font-size: 3.7rem; line-height: 37px;
+}
+.BImenu .wm{
+    width: 20%; float: left;
+}
+.BImenu .slogan{
+    width: 40%; float: left;
+}
+.BImenu .CP{
+    width:20%; float: left; margin-top: 0;
+}
+.BImenu .app{
+    margin-top: 0; width: 20%;
+}
+.wm span,.slogan span,.CP span,.app span{
+    font-size: 2.6rem; line-height: 80px; letter-spacing: -1px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+/* 1920 */
+@media screen and (min-width: 1300px){
+#banner{
+    height: 450px;
+} 
+#info{
+    margin: 0 0 100px 0;
+}
+.infoinner{
+    width: 1090px; margin: 0 auto;
+}
+.nicetocu{
+    height: 60px; width: 100%; text-align: center; margin: 80px 0 70px;
+}
+.nicetocu text tspan {
+    font-size: 6rem;
+}
+/* .infoinner h2{
+    font-size: 6rem; line-height: 60px; margin-bottom: 70px;
+} */
+.infoinner p{
+    font-size: 3.6rem; line-height: 60px;
+}
+.bstitle{
+    width: 1250px; margin: 0 auto;
+}
+.bstitle h2{
+    font-size: 5rem; line-height: 50px;
+}
+.bstitle .arrow{
+    width: 106px; height: 53px; margin: 35px auto;
+}
+.koreacu .bg{
+    height: 742px; 
+}
+.koreacu .koreainner{
+    width: 1250px; height: 742px; margin: 0 auto; padding: 60px 0;
+}
+.korea text tspan {
+    font-size: 4rem;
+}
+/* .koreainner h2{
+    font-size: 4rem; line-height: 40px; margin-bottom: 35px;
+} */
+.koreacu .koreainner p{
+    width: 860px; margin: 0 auto; font-size: 2.4rem; line-height: 36px; margin-bottom: 70px; margin-top: 30px;
+}
+.kcircle .c1{
+    width: 350px; height: 350px;
+}
+
+.kcircle .c1 a,.kcircle .c2 a,.kcircle .c3 a{
+    font-size: 3.2rem; padding: 150px 20px;
+}
+.kcircle .c2,.kcircle .c3{
+    width: 350px; height: 350px;
+}
+.kcircle .c2{
+    margin-left: -175px;
+}
+.storyinner{
+    width: 1250px; margin: 80px auto;
+}
+.bdiffer{
+    width: 1150px; margin: 0 auto;
+}
+
+.differ text tspan {
+    font-size: 4rem;
+}
+/* .bdiffer h2{
+    font-size: 4rem; line-height: 40px; 
+} */
+.bdiffer > div >p{
+    font-size: 2.4rem; line-height: 36px; width: 830px; margin: 0 auto; margin-bottom: 70px; margin-top: 30px;
+}
+
+.bdifferCircle li{
+    width: 350px; height: 350px; margin-bottom: 0; border: 5px solid #6a318a;
+}
+.bdifferCircle li a{
+    font-size: 3.2rem; line-height: 40px; 
+}
+.DLP .DLPtitle{
+    width: 830px; margin: 0 auto;    
+}
+.dlptitle text tspan {
+    font-size: 4rem;
+}
+/* .DLP h2{
+    font-size: 4rem; line-height: 40px; 
+} */
+.DLP > div > p{
+    font-size: 2.4rem; line-height: 36px; width: 830px; margin: 30px auto;
+}
+.DLP .moplatform{
+    width: 1250px; margin: 0 auto; margin-top: 40px; height: 539px; background-color: #fff;
+}
+.pform1,.pform2,.pform3{
+    height: 539px; width: 360px;
+}
+.pform1 .fc1,.pform2 .fc2,.pform3 .fc3{
+    width: 290px; height: 290px; margin-top: 50px;
+}
+.ftext{
+    margin-top: 45px;
+}
+.ftext p{
+    line-height: 30px; font-size: 2.2rem; display: block;
+}
+.pform2 .ftext{
+    margin-top: 45px;
+}
+.ftext b{
+    margin-top: 20px; font-size: 3rem; line-height: 30px;
+}
+.pform2 .ftext b{
+    margin-top: 20px;
+}
+#BI{
+    margin-top: 80px; margin-bottom: 95px;
+}
+.BIinner{
+    width: 1250px;
+}
+.BIinner h2{
+    font-size: 4rem; line-height: 40px; 
+}
+.wm a,.slogan a,.CP a,.app a{
+    background-size: auto 75px; padding-top: 75px;
+}
+.wm span,.slogan span,.CP span,.app span{
+    font-size: 3rem; line-height: 100px; 
+}
+
+
+}
+
+
+
+/* sub2 company.html */
+/* banner */
+.ban{
+    background-color: #d4ebe7; height: 325px; width: 100%; margin-top: 75px;
+    position: relative;
+}
+.ban .banImg{
+    width: 82.667%; margin: 0 auto; position: absolute; margin-left: 8.667%;
+}
+.ban .banImg .big{
+    width: 178px; height: 178px; border-radius: 50%; display: block; background: #d2d2d2 url(../img/bnr_02_1.png)no-repeat left/cover; float: left; opacity: 0.4; margin-top: 50px;
+}
+.ban .banImg .small{
+    width: 72px; height: 72px; border-radius: 50%; display: block; background: #6a318a url(../img/CU_LOGOclear.png)no-repeat center /contain; position: absolute; margin-left: 120px; background-size: 60px;
+    margin-top: 20px;
+}
+.ban .banText{
+    width: 82.667%; padding-top: 90px; margin: 0 auto; position: relative;
+}
+.ban .banText h2{
+    font-size: 3.2rem; font-weight: 700; text-align: center; display: block; line-height: 32px; margin-bottom: 15px;
+}
+
+/* svg */
+/* .kobrand text tspan {
+    width: 100%;
+    font-size: 3.2rem;
+    fill:transparent;
+    stroke-width: 1px;
+    stroke:#000;
+    stroke-dasharray: 280px;
+    stroke-dashoffset: 280px;
+    animation: kobrand 2s linear forwards;
+}
+@keyframes kobrand {
+    0% {stroke-dashoffset:250px;}
+    10% {fill:transparent;}
+    50% { stroke-dashoffset: 0; fill: #000;}
+    70% { stroke-dashoffset: 0; fill: #000;}
+    100% {stroke-dashoffset:0; fill: black;}
+} */
+
+
+.ban .banText p{
+    font-size: 1.6rem; font-weight: normal; line-height: 28px; text-align: center; letter-spacing: -1px; word-break: keep-all;
+}
+.sub2_wrap{
+    width: 82.667%; margin: 0 auto; margin-top: 50px;
+}
+
+
+/* cu특징 */
+#feat{
+    width: 100%;
+}
+#feat h2{
+    font-size: 3rem; line-height: 30px; text-align: center; font-weight: 700; margin-bottom: 35px;
+}
+.feat1{
+    width: 100%;  margin: 0 auto; 
+}
+.feat1 h3{
+    font-size: 2.4rem; font-weight: 700; text-align: center; line-height: 24px; color: #6a318a; word-break: keep-all; margin-bottom: 35px;
+}
+.fBox1,.fBox2,.fBox3,.fBox4{
+    width: 48.387%; height: 150px; float: left; background-color: #6a318a; position: relative;
+}
+.fBox1,.fBox3{
+    margin-right: 3.226%;
+}
+.fBox1,.fBox2{
+    margin-bottom: 25px;
+}
+
+.fBox1 .fboxinner1,
+.fBox2 .fboxinner2,
+.fBox3 .fboxinner3{
+    width: 80%; margin: 0 auto;  word-break: keep-all; height: 100%;
+}
+.fBox4 .fboxinner4{
+    width: 85%; margin: 0 auto;  word-break: keep-all; height: 100%;
+}
+.fBox1 .fnum1,
+.fBox2 .fnum2,
+.fBox3 .fnum3,
+.fBox4 .fnum4{
+    font-size: 2.4rem; font-family: 'Inter', sans-serif; line-height: 26px; color: #fff; font-weight: 800;; text-align: center; display: block; padding-top: 30px; margin-bottom: 10px;
+}
+.fBox1 p,
+.fBox2 p,
+.fBox3 p{
+    font-size: 2rem; line-height: 28px; color: #fff; text-align: center;
+}
+.fBox4 p{
+    font-size: 2rem; line-height: 28px; color: #fff; text-align: center; letter-spacing: -1px;
+}
+.fboxdetail1,
+.fboxdetail2,
+.fboxdetail3,
+.fboxdetail4{
+    background-color: #fff; border: 1px solid #6a318a; height: 100%; position: relative; margin-top: -150px;
+    display: none;
+}
+.fboxdetail1 p{
+    color: #6a318a; width: 80%; margin: 0 auto;  font-size: 1.8rem; line-height: 24px;
+    top: 50%; transform: translateY(-50%); width: 100%; padding: 10px; position: absolute;
+}
+.fboxdetail3 p{
+    color: #6a318a; width: 80%; margin: 0 auto;  font-size: 1.8rem; line-height: 24px;
+    top: 50%; transform: translateY(-50%); width: 100%; padding: 10px; position: absolute;
+}
+.fboxdetail2 p,.fboxdetail4 p{
+    color: #6a318a; width: 80%; margin: 0 auto;  font-size: 1.8rem; line-height: 24px;
+    top: 50%; transform: translateY(-50%); width: 100%; padding: 10px; position: absolute;
+}
+
+.feat2{
+    margin-top: 50px;
+}
+.feat2 h3{
+    font-size: 2.4rem; font-weight: 700; text-align: center; line-height: 28px; color: #6a318a; margin-bottom: 35px;
+}
+.eff{
+    width: 87.742%; margin: 0 auto;
+}
+
+
+.effcircle1{
+    width: 150px; height: 150px; border-radius: 50%; background-color: #d7e132; margin: 0 auto; position: relative; display: block; font-size: 2rem; line-height: 20px; text-align: center; padding: 55px 10px; color: #6a318a; font-weight: 700;
+    /* 추가 */
+    transform: translateY(100px); transition: all 0.4s; opacity: 0;
+}
+.effcircle1.active{
+    transform: translateY(0); opacity: 1;
+}
+.effcircle2.active{
+    transform: translateY(0); opacity: 1;
+}
+.effcircle3.active{
+    transform: translateY(0); opacity: 1;
+}
+
+.effcircle2{
+    width: 150px; height: 150px; border-radius: 50%; background-color: #9bc841; float: left; position: absolute; margin-top: -50px; font-size: 2rem; line-height: 24px; text-align: center; padding: 55px 30px; color: #6a318a; font-weight: 700;
+    /* 추가 */
+    transform: translateY(100px); transition: all 0.7s; opacity: 0;
+}
+.effcircle3{
+    width: 150px; height: 150px; border-radius: 50%; background-color: #bdbdbd; float: right; position: relative; margin-top: -50px; font-size: 2rem; line-height: 20px; text-align: center; padding: 55px 10px; color: #6a318a; font-weight: 700;
+    /* 추가 */
+    transform: translateY(100px); transition: all 1s; opacity: 0;
+}
+
+
+.effbox1,
+.effbox2,
+.effbox3{
+    display: none;
+}
+.effbox1 p,
+.effbox2 p,
+.effbox3 p,
+.ef1 .line1,
+.ef2 .line2,
+.ef3 .line3{
+    display: none;
+}
+.effmore{
+    position: relative; height: 40px; background-color: #6a318a; margin-top: 35px; margin-bottom: 50px;
+}
+.effmore a{
+    width: 100%; line-height: 40px; font-size: 1.4rem; text-align: center; display: block; color: #fff; font-weight: 700;
+}
+#franchise{
+    width: 100%; margin: 0 auto;
+}
+
+.guide{
+    width: 100%; height: 200px; background-color: #afcb3a; margin-bottom: 30px; 
+}
+.present{
+    width: 100%; height: 200px; background-color: #afcb3a; margin-bottom: 50px;
+}
+.ginner,.preinner{
+    width: 80%; margin: 0 auto;
+}
+.guide .gtitle,.present .prtitle{
+    padding-top: 30px; line-height: 22px; font-size: 2.2rem; font-weight: 700; margin-bottom: 15px; 
+}
+.guide .gtext,.present .prtext{
+    width: 57%; line-height: 24px; font-size: 1.8rem; display: inline-block;
+}
+.guide span{
+    width: 95px; height: 95px; border-radius: 50%; background: url(../img/bg_index_02.gif)no-repeat center/contain; display: block; float: right; margin-top: -20px;
+}
+.present span{
+    width: 95px; height: 95px; border-radius: 50%; background: url(../img/bg_index_03.gif)no-repeat center/contain; display: block; float: right; margin-top: -20px;
+}
+.moquestion{
+    width: 100%; height: 210px; margin: 0 auto; background-color: #d2c999; padding-top: 25px;
+}
+.mo_que_inner{
+    width: 82.667%; margin: 0 auto;
+}
+.ques1{
+    width: 98px; display: block; float: left;
+}
+.qc1{
+    width: 98px; height: 98px; border-radius: 50%; display: block; background: url(../img/bg_index_recommend.gif)no-repeat center/contain;
+}
+.ques2{
+    width: 98px; display: block; float: left; position: absolute; left: 50%; transform: translateX(-50%);
+}
+.ques2 .qc2{
+    height: 98px; width: 98px; border-radius: 50%; background: url(../img/bg_index_consult.gif)no-repeat center/cover; display: block;
+}
+.ques3{
+    width: 98px; display: block; float: right;
+}
+.ques3 .qc3{
+    height: 98px; width: 98px; border-radius: 50%; background: url(../img/quick_franchise_03.gif)no-repeat center/cover; display: block;
+}
+.qtext p{
+    padding-top: 0px; line-height: 20px; font-size: 1.5rem; text-align: center;
+}
+.ques3 .qtext p{
+    padding-top: 15px;
+}
+.ques1 .qtext p,
+.ques2 .qtext p,
+.ques3 .qtext p{
+    display: none;
+}
+
+.qtext b{
+    font-size: 1.6rem; line-height: 24px; text-align: center; font-weight: 700; display: block; margin-top: 20px;
+}
+
+#success{
+    width: 82.667%; margin: 0 auto; margin-top: 50px;
+}
+.successInner{
+    width: 100%; margin: 0 auto;
+}
+.successInner h2{
+    font-size: 3rem; line-height: 32px; text-align: center; font-weight: 700; margin-bottom: 35px;
+}
+.sucmain1{
+    width: 87.742%; margin: 0 auto; margin-bottom: 35px;
+    /* 추가 */
+    transform: translateY(100px); transition: all 1s; opacity: 0;
+}
+.sucmain1.active,
+.sucmain2.active{
+    transform: translateY(0); opacity: 1;
+}
+.sucImg1{
+    width: 100%; height: 200px; background: url(../img/suc1.png)no-repeat center/cover; border: 3px solid #6a318a; margin-bottom: 30px;
+}
+.suctext1{
+    width: 100%; margin: 0 auto;
+}
+.suctext1 p:nth-child(1){
+    font-size: 2.2rem; line-height: 22px; text-align: center; font-weight: 700; margin-bottom: 15px;
+}
+.suctext1 p:nth-child(2){
+    font-size: 1.8rem; line-height: 18px; text-align: center;
+}
+.suctext1 a{
+    display: none;
+}
+
+
+.sucmain2{
+    width: 87.742%; margin: 0 auto; margin-bottom: 35px;
+    /* 추가 */
+    transform: translateY(100px); transition: all 1s; opacity: 0;
+}
+.sucImg2{
+    width: 100%; height: 200px; background: url(../img/suc2.JPG)no-repeat center/cover; border: 3px solid #6a318a; margin-bottom: 30px;
+}
+.suctext2{
+    width: 80%; margin: 0 auto;
+}
+.suctext2 p:nth-child(1){
+    font-size: 2.2rem; line-height: 26px; text-align: center; font-weight: 700; margin-bottom: 15px; word-break: keep-all;
+}
+.suctext2 p:nth-child(2){
+    font-size: 1.8rem; line-height: 18px; text-align: center; letter-spacing: -1px;
+}
+.suctext2 a{
+    display: none;
+}
+.sucpc1,
+.sucpc2{
+    display: none;
+}
+
+.sucmore{
+    position: relative; height: 40px; background-color: #6a318a; margin-top: 35px; margin-bottom: 50px;
+}
+.sucmore a{
+    width: 100%; line-height: 40px; font-size: 1.4rem; text-align: center; display: block; color: #fff; font-weight: 700;
+}
+
+
+
+/* company 768 */
+@media screen and (min-width: 768px){
+.ban{
+    height: 410px; margin-top: 80px;
+}
+.baninner{
+    width: 80.729%; margin: 0 auto;
+}
+.ban .banImg{
+    margin-left: 0; 
+}
+.ban .banImg .big{
+    width: 280px; height: 280px; margin-top: 60px; opacity: 1;
+}
+.ban .banImg .small{
+    width: 110px; height: 110px; margin-top: 80px; margin-left: 200px; background-size: 80px;
+}
+.ban .banText{
+    width: 53.226%; padding-top: 50px; position: relative; float: right;
+}
+.ban .banText h2{
+    font-size: 4.5rem; line-height: 52px; text-align: right; width: 75%; word-break: keep-all; float: right;
+}
+.ban .banText p{
+    float: right; text-align: right; font-size: 1.8rem; line-height: 28px;
+}
+.sub2_wrap{
+    width: 80.729%; margin-top: 70px;
+}
+#feat h2{
+    font-size: 3.5rem; line-height: 35px;margin-bottom: 0;
+}
+.feat1{
+    width: 87.742%; margin: 0 auto;
+}
+.feat1 h3{
+    font-size: 2.6rem; line-height: 32px; width: 80%; margin: 50px auto;
+}
+.fBox1,.fBox2,.fBox3,.fBox4{
+    width: 42.279%; height: 230px;
+}
+
+.fBox1,.fBox3{
+    margin-right: 15.442%;
+}
+.fBox1,.fBox2{
+    margin-bottom: 50px;
+}
+.fBox1 .fnum1,
+.fBox2 .fnum2,
+.fBox3 .fnum3,
+.fBox4 .fnum4{
+    font-size: 3.2rem; line-height: 32px; padding-top: 50px; margin-bottom: 25px;
+}
+.fBox1 p,
+.fBox2 p,
+.fBox3 p,
+.fBox4 p{
+    font-size: 2.4rem; line-height: 32px; font-weight: normal;
+}
+.fboxdetail1,
+.fboxdetail2,
+.fboxdetail3,
+.fboxdetail4{
+    background-color: #fff; height: 230px; margin-top: -230px;
+}
+
+.fboxdetail1 p{
+    font-size: 2.4rem; line-height: 32px; padding: 20px;
+}
+.fboxdetail3 p{
+    font-size: 2.4rem; line-height: 32px; padding: 20px;
+}
+.fboxdetail2 p,.fboxdetail4 p{
+    font-size: 2.4rem; line-height: 36px; padding: 20px;
+}
+
+.feat2{
+    margin-top: 70px; position: relative;
+}
+.feat2 h3{
+    font-size: 2.6rem; line-height: 26px; 
+}
+.eff{
+    width: 100%; height: 450px;
+}
+.effcircle1,
+.effcircle2,
+.effcircle3{
+    width: 210px; height: 210px; font-size: 2.2rem; padding: 80px 30px; line-height: 30px;
+}
+
+.effcircle1{
+    float: left;
+}
+.effcircle2{
+    clear: both; margin-top: 0; left: 0; position: absolute; transform: translate(0,100px);
+}
+.effcircle2.active{
+    transform: translate(0,0); opacity: 1; left: 0;
+}
+.effcircle3{
+    margin-top: 0;
+}
+.ef1{
+    width: 210px; position: relative; display: block; float: left;
+}
+.ef2{
+    width: 210px; position: relative; display: block; margin: 0 auto;
+}
+.ef3{
+    width: 210px; position: relative; float: right;
+}
+.effbox1 p,
+.effbox2 p,
+.effbox3 p{
+    display: block;
+}
+.effbox1{
+    width: 180px; height: 180px; border: 2px solid #d7e132; 
+    position: absolute; left: 50%; transform: translateX(-50%);
+}
+.effbox1 p{
+    font-size: 1.8rem; line-height: 24px; text-align: center; padding: 10px; word-break: keep-all;
+}
+.ef1 .line1{
+    width: 3px; height: 60px; border: 3px dashed #000; position: relative; display: block; margin: 210px auto; margin-bottom: 0;
+    /* 추가 */
+    transform: translateY(100px); transition: all 1.2s; opacity: 0;
+}
+.ef1 .line1.active{
+    transform: translateY(0); opacity: 1;
+}
+.ef2 .line2.active{
+    transform: translateY(0); opacity: 1;
+}
+.ef3 .line3.active{
+    transform: translateY(0); opacity: 1;
+}
+.effbox2{
+    width: 180px; height: 180px; border: 2px solid #9bc841; left: 50%; transform: translateX(-50%); position: absolute; margin-top: 270px;
+}
+.ef2 .line2{
+    width: 3px; height: 60px; border: 3px dashed #000; position: absolute; margin-top: 210px; display: block;
+    left: 50%; transform: translateX(-50%);
+    /* 추가 */
+    transform: translateY(100px); transition: all 1.2s; opacity: 0;
+}
+.effbox2 p{
+    font-size: 1.8rem; line-height: 24px; text-align: center; padding: 25px 10px; word-break: keep-all;
+}
+.effbox3{
+    width: 180px; height: 180px; border: 2px solid #bdbdbd; 
+    position: absolute; left: 50%; transform: translateX(-50%);
+}
+
+.effbox3 p{
+    font-size: 1.8rem; line-height: 24px; text-align: center; padding: 20px 10px; word-break: keep-all;
+}
+.ef3 .line3{
+    width: 3px; height: 60px; border: 3px dashed #000; position: relative; display: block; margin: 210px auto; margin-bottom: 0;
+    /* 추가 */
+    transform: translateY(100px); transition: all 1.2s; opacity: 0;
+}
+
+
+
+
+
+.effmore{
+    position: relative; height: 50px; background-color: #6a318a; margin-top: 70px; margin-bottom: 70px;
+}
+.effmore a{
+    line-height: 50px; font-size: 1.8rem;
+}
+.guide{
+    width: 80.968%; margin: 0 auto; height: 220px; background-color: #afcb3a; margin-bottom: 30px;
+}
+.present{
+    width: 80.968%; margin: 0 auto; height: 220px; margin-bottom: 70px;
+}
+.guide .gtitle,.present .prtitle{
+    padding-top: 40px; line-height: 24px; font-size: 2.4rem; font-weight: 700; margin-bottom: 25px; 
+}
+.guide .gtext,.present .prtext{
+    width: 57%; line-height: 30px; font-size: 2.2rem; display: inline-block;
+}
+.guide span,.present span{
+    width: 130px; height: 130px; margin-top: -45px;
+}
+.moquestion{
+    width: 80.729%; margin: 0 auto; padding-top: 0; height: 319px; background-color: #fff;
+}
+.mo_que_inner{
+    width: 100%; position: relative;
+}
+
+
+.ques1,.ques2,.ques3{
+    width: 32%; height: 319px; background-color: #d2c999; 
+}
+
+.qc1,.ques2 .qc2,.ques3 .qc3{
+    width: 170px; height: 170px; position: relative; left: 50%; transform: translateX(-50%); margin-top: 30px;
+}
+
+.qtext p{
+    line-height: 32px; font-size: 2.2rem; display: block; text-align: center; width: 80%; margin: 0 auto; color: #000; height: auto; padding-top: 50px;
+}
+.ques2 .qtext p{
+    padding-top: 60px;
+}
+.ques3 .qtext p{
+    padding-top: 70px;
+}
+.qtext b{
+    width: 80%; font-size: 2.4rem; line-height: 32px; display: inline-block; position: relative; text-align: center; left: 50%; transform: translateX(-50%); word-break: keep-all; margin-top: 25px;
+}
+#success{
+    width: 80.729%; margin: 0 auto; margin-top: 50px;
+}
+.successInner h2{
+    font-size: 3.5rem; line-height: 35px;
+}
+
+.sucImg1{
+    width: 55.645%; height: 235px; margin-bottom: 0; display: block; float: left;
+}
+.suctext1{
+    float: right; width: 44.355%;
+}
+
+.suctext1 p:nth-child(1){
+    font-size: 2.6rem; line-height: 36px; margin-top: 25px; margin-left: 10%; text-align: left; word-break: keep-all; margin-bottom: 25px;
+}
+.suctext1 p:nth-child(2){
+    text-align: left; margin-left: 10%;
+}
+.sucImg2{
+    width: 55.645%; height: 235px; float: right; margin-bottom: 0;
+}
+.suctext2{
+    float: left; width: 44.355%;
+}
+.suctext2 p:nth-child(1){
+    font-size: 2.6rem; line-height: 36px; text-align: left; margin-bottom: 25px; margin-right: 3%; letter-spacing: -1px; margin-top: 25px; margin-bottom: 25px; word-break: break-all;
+}
+.suctext2 p:nth-child(2){
+    text-align: left; letter-spacing: 0px;
+}
+.suctext1 a,.suctext2 a{
+    display: block;
+}
+.suctext1 a{
+    display: block; width: 140px; height: 40px; background-color: #6a318a; font-size: 1.6rem; line-height: 40px; color: #fff; padding: 0 30px; font-weight: 700; margin-left: 6.824%; margin-top: 30px;
+}
+.suctext2 a{
+    display: block; width: 140px; height: 40px; background-color: #6a318a; font-size: 1.6rem; line-height: 40px; color: #fff; padding: 0 30px; font-weight: 700; margin-right: 3%; margin-top: 30px;
+}
+.sucmore{
+    position: relative; height: 50px; margin-top: 0px; margin-bottom: 90px;
+}
+.sucmore a{
+    line-height: 50px; font-size: 1.8rem;
+}
+.sucmain2{
+    width: 87.742%; margin: 0 auto; margin-bottom: 70px;
+}
+}
+
+
+/* 1024 */
+@media screen and (min-width: 1024px){
+.ban{
+    margin-top: 0; height: 480px;
+}
+.baninner{
+    width: 83.008%;
+}
+.ban .banImg .big{
+    width: 340px; height: 340px; margin-top: 70px;
+}
+.ban .banImg .small{
+    width: 150px; height: 150px; margin-top: 100px; margin-left: 240px; background-size: 110px;
+}
+.ban .banText{
+    width: 52%; padding-top: 80px;
+}
+.ban .banText h2{
+    font-size: 5rem; line-height: 56px; text-align: right; width: 100%; word-break: keep-all; float: right; margin-bottom: 40px;
+}
+.ban .banText p{
+    float: right; text-align: right; font-size: 2.2rem; line-height: 36px;
+}
+.sub2_wrap{
+    width: 83.008%; margin-top: 80px;
+}
+#feat h2{
+    font-size: 4rem; line-height: 40px;
+}
+.feat1{
+    width: 100%;
+}
+.feat1 h3{
+    font-size: 3rem; line-height: 30px; width: 100%; margin: 50px auto; margin-bottom: 45px;
+}
+.fBox1,.fBox2,.fBox3,.fBox4{
+    width: 23.765%; height: 202px;
+}
+.fBox1,.fBox3{
+    margin-right: 1.646%;
+}
+.fBox2{
+    margin-right: 1.646%;
+}
+.fBox1,.fBox2{
+    margin-bottom: 0px;
+}
+.fBox1 .fnum1,
+.fBox2 .fnum2,
+.fBox3 .fnum3,
+.fBox4 .fnum4{
+    font-size: 4rem; line-height: 40px; padding-top: 35px; margin-bottom: 15px;
+}
+.fBox1 p,
+.fBox2 p,
+.fBox3 p,
+.fBox4 p{
+    font-size: 2.8rem; line-height: 36px;
+}
+.fboxdetail1,
+.fboxdetail2,
+.fboxdetail3,
+.fboxdetail4{
+     height: 202px; position: relative; margin-top: -202px;
+    display: none;
+}
+.fboxdetail1 p{
+    font-size: 2.2rem; line-height: 28px;
+    padding-top: 15px;
+}
+.fboxdetail3 p{
+    font-size: 2.2rem; line-height: 32px;
+}
+.fboxdetail2 p{
+    font-size: 2.2rem; line-height: 30px;
+}
+.fboxdetail4 p{
+    font-size: 2.2rem; line-height: 32px;
+}
+.feat2 h3{
+    font-size: 3rem; line-height: 30px; margin-bottom: 45px;
+}
+.eff{
+    width: 100%; height: 650px; margin-bottom: 70px;
+}
+.effcircle1,
+.effcircle2,
+.effcircle3{
+    width: 310px; height: 310px; font-size: 3rem; padding: 120px 50px; line-height: 36px;
+}
+.ef1{
+    width: 310px;
+}
+.ef2{
+    width: 310px; 
+}
+.ef3{
+    width: 310px; 
+}
+.effbox1{
+    width: 260px; height: 260px; border: 4px solid #d7e132; 
+}
+.ef1 .line1{
+    margin-top: 310px; height: 80px;
+}
+.effbox1 p{
+    font-size: 2.2rem; line-height: 30px; padding: 40px 10px;
+}
+.effbox2{
+    width: 260px; height: 260px; border: 4px solid #9bc841; margin-top: 390px;
+}
+.ef2 .line2{
+    margin-top: 310px; height: 80px;
+}
+.effbox2 p{
+    font-size: 2.2rem; line-height: 30px; padding: 50px 10px; word-break: keep-all;
+}
+.effbox3{
+    width: 260px; height: 260px; border: 4px solid #bdbdbd; 
+}
+.effbox3 p{
+    font-size: 2.2rem; line-height: 30px; padding: 60px 10px;
+}
+.ef3 .line3{
+    margin-top: 310px; height: 80px;
+}
+.effmore{
+    height: 60px; margin-top: 0;
+}
+.effmore a{
+    line-height: 60px; font-size: 2.2rem;
+}
+.guide{
+    width: 50%; height: 220px; margin-bottom: 0; float: left; border-right: 1px solid #fff;
+}
+.ginner,.preinner{
+    width: 85.941%;
+}
+.present{
+    width: 50%; float: right; height: 220px; margin-bottom: 70px;
+}
+.guide .gtitle,.present .prtitle{
+    padding-top: 35px; line-height: 28px; font-size: 2.8rem; margin-bottom: 15px;
+}
+.guide .gtext,.present .prtext{
+    font-size: 2.2rem; line-height: 30px; width: 58%;
+}
+.guide span,.present span{
+    margin-top: -30px;
+}
+.moquestion{
+    width: 83.008%; height: 500px;
+}
+.ques1,.ques2,.ques3{
+    width: 32%; height: 500px; background-color: #d2c999; 
+}
+.qc1,.ques2 .qc2,.ques3 .qc3{
+    width: 240px; height: 240px; margin-top: 40px;
+}
+.ques1 .qtext p,
+.ques2 .qtext p,
+.ques3 .qtext p{
+    display: block; margin-top: 30px; font-size: 2.2rem; line-height: 30px; padding-top: 0;
+}
+.ques1 .qtext p{
+    letter-spacing: -2px;
+}
+.qtext b{
+    font-size: 2.8rem; line-height: 36px; width: 100%;
+}
+.ques1 .qtext b{
+    margin-top: 15px;
+}
+#success{
+    width: 83.008%; margin-top: 70px;
+}
+.successInner h2{
+    font-size: 4rem; line-height: 40px; margin-bottom: 60px;
+}
+.sucmain1{
+    margin-bottom: 50px;
+}
+.sucImg1,.sucImg2{
+    width: 51.765%; height: 300px;
+}
+.suctext1,.suctext2{
+    width: 48.235%;
+}
+.suctext1 p:nth-child(1){
+    font-size: 3.2rem; line-height: 40px; margin-top: 30px; margin-left: 6.824%; margin-bottom: 30px;
+}
+.suctext1 p:nth-child(2){
+    margin-left: 6.824%; font-size: 2.2rem; line-height: 22px;
+}
+.suctext2 p:nth-child(1){
+    font-size: 3.2rem; line-height: 40px; margin-top: 30px; margin-right: 3.882%; margin-bottom: 30px;
+}
+.suctext2 p:nth-child(2){
+    font-size: 2.2rem; line-height: 22px; margin-right: 3.882%;
+}
+.suctext1 a,.suctext2 a{
+    width: 183px; height: 50px; font-size: 1.8rem; line-height: 50px; padding: 0 45px;
+}
+.sucmore{
+    height: 60px; margin-top: 0; margin-bottom: 100px;
+}
+.sucmore a{
+    line-height: 60px; font-size: 2.2rem;
+}
+
+
+}
+
+
+/* 1920 */
+@media screen and (min-width: 1300px){
+.ban{
+    height: 567px;
+}
+
+.baninner{
+    width: 1250px; margin: 0 auto;
+}
+.ban .banImg .big{
+    width: 427px; height: 427px; margin-top: 60px;
+}
+.ban .banImg .small{
+    width: 242px; height: 242px; margin-top: 100px; margin-left: 278px; background-size: 150px;
+}
+.ban .banText{
+    width: 695px; padding-top: 100px;
+}
+.ban .banText h2{
+    font-size: 6rem; line-height: 56px; text-align: center; margin-bottom: 45px; 
+}
+.ban .banText p{
+    text-align: center; font-size: 2.8rem; line-height: 48px;
+}
+.sub2_wrap{
+    width: 1250px; margin: 0 auto; margin-top: 80px;
+}
+#feat h2{
+    font-size: 5rem; line-height: 50px;
+}
+.feat1 h3{
+    font-size: 4rem; line-height: 40px; width: 100%; margin: 60px auto; margin-bottom: 45px;
+}
+.fBox1,.fBox2,.fBox3,.fBox4{
+    width: 300px; height: 300px;
+}
+.fBox1,.fBox3{
+    margin-right: 17px;
+}
+.fBox2{
+    margin-right: 16px;
+}
+.fBox1 .fnum1,
+.fBox2 .fnum2,
+.fBox3 .fnum3,
+.fBox4 .fnum4{
+    font-size: 5rem; line-height: 50px; padding-top: 55px; margin-bottom: 35px;
+}
+.fBox1 p,
+.fBox2 p,
+.fBox3 p,
+.fBox4 p{
+    font-size: 3.2rem; line-height: 48px;
+}
+.fboxdetail1,
+.fboxdetail2,
+.fboxdetail3,
+.fboxdetail4{
+    height: 300px; margin-top: -300px;
+}
+.fboxdetail1 p{
+    font-size: 3rem; line-height: 40px;
+    font-weight: normal; letter-spacing: -1px; padding: 0 20px;
+}
+.fboxdetail3 p{
+    font-size: 3rem; line-height: 40px; font-weight: normal; padding: 0 20px;
+}
+.fboxdetail2 p{
+    font-size: 3rem; line-height: 40px;
+    font-weight: normal; padding: 0 20px;
+}
+.fboxdetail4 p{
+    font-size: 3rem; line-height: 40px;
+    font-weight: normal; padding: 0 20px;
+}
+
+.feat2{
+    margin-top: 80px;
+}
+.feat2 h3{
+    font-size: 4rem; line-height: 40px; 
+}
+.eff{
+    width: 974px; height: 740px; margin-bottom: 80px;
+}
+.effcircle1,
+.effcircle2,
+.effcircle3{
+    width: 360px; height: 360px; font-size: 3.2rem; padding: 150px 80px; line-height: 48px;
+}
+.ef1,.ef2,.ef3{
+    width: 360px;
+}
+.effbox1,.effbox2,.effbox3{
+    width: 300px; height: 300px;
+}
+.ef1 .line1,.ef2 .line2,.ef3 .line3{
+    margin-top: 360px;
+}
+.effbox1 p{
+    font-size: 2.6rem; line-height: 36px; padding: 55px 15px;
+}
+.effbox2 p,.effbox3 p{
+    font-size: 2.6rem; line-height: 36px; padding: 75px 25px;
+}
+.effbox2{
+    margin-top: 440px;
+}
+.effmore{
+    width: 1250px;
+}
+.effmore a{
+    line-height: 60px; font-size: 2.4rem;
+}
+#franchise{
+    width: 1150px;
+}
+.guide,.present{
+    height: 240px; margin-bottom: 80px; border-right: 1px solid #fff;
+}
+.ginner,.preinner{
+    width: 487px;
+}
+
+.guide .gtitle,.present .prtitle{
+    padding-top: 45px; line-height: 30px; font-size: 3rem; margin-bottom: 20px;
+}
+.guide .gtext,.present .prtext{
+    font-size: 2.4rem; line-height: 32px;
+}
+.guide span,.present span{
+    margin-top: -50px; width: 160px; height: 160px;
+}
+.moquestion{
+    width: 1150px; margin: 0 auto; height: 540px;
+}
+.ques1,.ques2,.ques3{
+    width: 353px; height: 540px;
+}
+.qc1,.ques2 .qc2,.ques3 .qc3{
+    width: 290px; height: 290px;
+}
+.ques1 .qtext p,
+.ques2 .qtext p,
+.ques3 .qtext p{
+    margin-top: 35px; word-break: keep-all; letter-spacing: 0px;
+}
+.ques3 .qtext p{
+    width: 80%;
+}
+.qtext b{
+    font-size: 3rem; line-height: 30px; width: 100%; margin-top: 15px;
+}
+.ques1 .qtext b{
+    margin-top: 15px;
+}
+#success{
+    width: 1250px; margin-top: 80px;
+}
+.successInner h2{
+    font-size: 5rem; line-height: 50px; margin-bottom: 45px;
+}
+.sucmain1{
+    margin-bottom: 0; width: 592px; float: left; position: relative; border: 5px solid #6a318a; overflow: hidden;
+}
+.sucImg1,.sucImg2{
+    width: 100%; height: 400px; position: relative; border: none;
+}
+
+.sucmain2{
+    width: 592px; float: right; position: relative; border: 5px solid #6a318a; overflow: hidden;
+}
+.suctext2,.suctext1{
+    width: 100%; position: absolute; height: 100%; background-color: rgba(255, 255, 255, 0.6); margin-top: 300px;
+}
+
+.suctext1 p:nth-child(1),
+.suctext2 p:nth-child(1){
+    font-size: 2.4rem; line-height: 30px; margin: 0; text-align: center; font-weight: 800; opacity: 1; margin-top: 18px;
+}
+.suctext1 p:nth-child(1).active,
+.suctext2 p:nth-child(1).active{
+    font-size: 3rem; line-height: 30px; margin: 0; text-align: center; font-weight: 800; opacity: 1; margin-top: 80px;
+}
+.suctext1 p:nth-child(2),
+.suctext2 p:nth-child(2){
+    margin: 0; text-align: center; line-height: 30px;
+}
+.suctext1 p:nth-child(2).active,
+.suctext2 p:nth-child(2).active{
+    margin: 30px; text-align: center; line-height: 30px; font-size: 2.4rem;
+}
+.suctext1 a,.suctext2 a{
+    display: none;
+}
+.sucpc1,.sucpc2{
+    font-size: 2.4rem; line-height: 34px; text-align: center; padding: 0 50px;
+}
+.sucmore{
+    width: 1250px;
+}
+.sucmore a{
+    line-height: 60px; font-size: 2.4rem;
+}
+
+}

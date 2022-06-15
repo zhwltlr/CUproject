@@ -1,0 +1,55 @@
+function init_sns(container){  //container : SNS링크를 추가 할 객체ID
+   if(!document.getElementById(container)) return;
+   var HOST = location.protocol+"//"+location.host;
+   var HREF = encodeURIComponent(location.href);
+   if(document.getElementsByTagName("title")[0]){
+      var TITLE = encodeURIComponent(document.getElementsByTagName("title")[0].innerHTML);
+   }else TITLE = "";
+
+   var FACEBOOK = "http://www.facebook.com/sharer.php?u="+HREF;
+   var TWITTER = "http://twitter.com/share?text="+TITLE+"&url="+HREF;
+   var ME2DAY = "http://me2day.net/posts/new?new_post[body]="+TITLE+":"+HREF+"&new_post[tags]="+HOST;
+   var MSN = "http://profile.live.com/badge?url="+HREF+"&text="+TITLE;
+   var CYGONGAM = "http://csp.cyworld.com/bi/bi_recommend_pop.php?url="+HREF+"&title_nobase64="+TITLE;
+
+   var html = [];
+   html.push('<ul class="footerSns">');
+   html.push('   <li><img id="sns_facebook" src="/images/common/footer_facebook.gif" alt="Facebook" /></li>');   
+   html.push('   <li><img id="sns_twitter" src="/images/common/footer_twitter.gif" alt="Twitter" /></li>');
+   html.push('   <li><img src="/images/common/footer_blog.gif" alt="Blog" /></li>');
+   //html.push('   <li><img id="sns_me2day" src="/images/common/btn/btn_snsMe_on.gif" alt="me2day" /></li>');
+   //html.push('   <li><img id="sns_msn" src="img/msn.gif" alt="msn" /></li>');
+   //html.push('   <li><img id="sns_cygongam" src="img/cygongam.gif" alt="cyworld" /></li>');
+   html.push('</ul>');
+   /*
+   html.push('<img id="sns_facebook" src="/images/common/footer_facebook.gif" alt="facebook" />');
+   html.push('<img id="sns_twitter" src="/images/common/footer_twitter.gif" alt="twitter" />');
+   html.push('<img id="sns_me2day" src="/images/common/footer_blog.gif" alt="me2day" />');
+   */
+   document.getElementById(container).innerHTML = html.join("\n");
+
+   var sns = document.getElementById(container).getElementsByTagName("img");
+   for(var i=0; i<sns.length; i++){
+      sns[i].style.cursor = "pointer";
+      sns[i].onclick = function(){
+         switch(this.id){
+            case "sns_facebook" :
+               window.open(FACEBOOK, "facebookWindow");
+               break;
+            case "sns_twitter" :
+               window.open(TWITTER, "twitterWindow");
+               break;
+            case "sns_me2day" :
+               window.open(ME2DAY, "facebookWindow");
+               break;
+            case "sns_msn" :
+               window.open(MSN, "facebookWindow");
+               break;
+            case "sns_cygongam" :
+               window.open(CYGONGAM, "cygongamWindow", "width=400,height=364,scrollbars=no,resizable=no");
+               break;
+         }
+      }
+   }
+}
+

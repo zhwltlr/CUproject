@@ -1,0 +1,71 @@
+$(function (d) {
+	var init = function(Obj, Opt){
+			var defOpt = {
+				speed 	: 3000,
+				BtnL 	: "btn_left",
+				BtnR 	: "btn_right",
+				dTion   : "l",
+				lsWar 	: "ul",
+				viWar 	: "li",
+				viCnt 	: 0
+			}
+			if(Opt) {
+				d.extend(defOpt, Opt);
+			};
+			var that = $(Obj);
+			var Root = this;
+			Root.uWar = that.find(defOpt.lsWar);
+			Root.lWar = that.find(defOpt.viWar);
+			Root.lWid =  function() { return (defOpt.dTion == 't') ? Root.lWar.innerHeight() : Root.lWar.innerWidth(); }
+			console.log(Root.lWid());
+			Root.lDtion = (defOpt.dTion == 't') ? {'margin-top':"-"+Root.lWid()+"px"} : {'margin-left':"-"+Root.lWid()+"px"};
+			Root.dDtion = (defOpt.dTion == 't') ? {'margin-top':0} : {'margin-left':0};
+			Root.isTrue = true;
+			Root.aWar = new Array();
+
+			Root.lWar.each(function  (i) {
+				d(this).children().attr("data-idx",i);
+				Root.aWar[i] = d(this).html();
+				if(i > defOpt.viCnt) d(this).remove();
+			});
+
+			d(that.find(defOpt.BtnR)).bind(
+			{
+				"click":function(e){
+					e.preventDefault();
+					if(!Root.isTrue) return;
+					Root.isTrue = false;
+					idx = parseInt(Root.uWar.find(defOpt.viWar+":last").children().attr("data-idx"));
+					now = (idx >= Root.aWar.length-1) ? 0 : idx+1;
+					Root.uWar.append("<"+defOpt.viWar+">"+Root.aWar[now]+"</"+defOpt.viWar+">").animate(Root.lDtion,defOpt.speed,function() {
+						Root.uWar.find(defOpt.viWar+":first").remove();
+						Root.uWar.css(Root.dDtion);
+						Root.isTrue = true;
+						if($.isFunction(defOpt.callback)){
+							defOpt.callback.call(this,now);
+						}
+					});
+				}
+			});
+			d(that.find(defOpt.BtnL)).bind(
+			{
+				"click":function(e){
+					e.preventDefault();
+					if(!Root.isTrue) return;
+					Root.isTrue = false;
+					idx = parseInt(Root.uWar.find(defOpt.viWar+":first").children().attr("data-idx"));
+					now = (idx <= 0) ? Root.aWar.length-1 : idx-1;
+					Root.uWar.prepend("<"+defOpt.viWar+">"+Root.aWar[now]+"</"+defOpt.viWar+">").css(Root.lDtion).animate(Root.dDtion,defOpt.speed,function() {
+						Root.uWar.find(defOpt.viWar+":last").remove();
+						Root.isTrue = true;
+						if($.isFunction(defOpt.callback)){
+							defOpt.callback.call(this,now);
+						}
+					});
+				}
+			});
+	};
+	$.fn.slider = function (o) {
+		return new init(this, o);
+	}
+}(jQuery));

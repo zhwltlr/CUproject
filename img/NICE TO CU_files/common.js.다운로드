@@ -1,0 +1,90 @@
+/*
+ * BGF Front-End Javascript Library
+ * @Date : 2014-03-11
+ * @Author : yhlee
+ * 업무에 공통으로 쓰이는 자바 스크립트
+ **/
+
+/**
+ * 숫자인지 여부를 체크 
+ * obj  	: 개체
+ * return 	:  
+ */
+
+$.fn.numberOnly = function(includeDot) {
+		this.each(function(){
+			$(this).on('keyup', function(){
+				var _this = $(this);
+		        var value = _this.val().match(/[^0-9]/g);
+		    	if(value!=null) {
+		    		_this.val(_this.val().replace(/[^0-9]/g,''));
+		    	}
+			});
+			$(this).keydown(function (e) {
+		        var key = e.which || e.charCode || e.keyCode || 0;
+		        // allow backspace, tab, delete, arrows, numbers and keypad numbers ONLY
+		        return (
+		            key == 8 ||
+		            key == 9 ||
+		            key == 86 ||
+		            key == 109 ||
+		            key == 189 ||
+		            key == 46 ||
+		            (includeDot && key == 110) || (includeDot && key == 190) ||
+		            (key >= 37 && key <= 40) ||
+		            (key >= 48 && key <= 57) ||
+		            (key >= 96 && key <= 105));
+		    });
+		});
+	};
+   
+
+	
+	/**
+	 * 블랙워드 리스트
+	 */
+	var BlockWordsList;
+	
+	function BlockWordsFilterList(contextName) {
+
+		$.ajax({
+		    url: contextName + "/blockWordsFilter.do",
+		    type: "POST",
+		    cache:false,
+		    timeout : 30000, 
+		    dataType:"json",
+		    data: {},
+		    success: function(data) {
+		    	BlockWordsList = data.resltList;
+		    }
+		});
+		
+	}
+
+	/**
+	 * 블랙워드 리스트 에서 걸러내기
+	 */
+	function BlockWordsFilter( inputWord ) {
+
+		for(var i=0; i < BlockWordsList.length;i++) {
+			
+			var row = BlockWordsList[i];
+			var SLANG = row.SLANG.SLANG;
+			
+			if (inputWord.indexOf( SLANG ) > -1) {
+				alert("금지어가 포함되어 저장이 불가능합니다.\n\n금기어 : "+SLANG);
+				return true;
+			}
+			
+		}
+	}
+	
+	/**
+	 * 정해진 자리수가 채워지면 다음 개체로 자동이동
+	 * 
+	 */
+	function nextstep(cobj, nobj, cnt) {
+		if($('#'+cobj).val().length == cnt) {
+			$('#'+nobj).focus();
+		}
+	}

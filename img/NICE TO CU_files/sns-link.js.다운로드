@@ -1,0 +1,31 @@
+$(document).ready(function() {
+   var HREF = encodeURIComponent(location.href);
+   if(document.getElementsByTagName("title")[0]){
+      var TITLE = encodeURIComponent(document.getElementsByTagName("title")[0].innerHTML);
+   }else TITLE = "";
+
+   var FACEBOOK = "http://www.facebook.com/sharer.php?u="+HREF;
+   var TWITTER = "http://twitter.com/share?text="+TITLE+"&url="+HREF;
+
+	 
+   $('ul.snsWrap li').each(function(idx) {
+	   if(idx == 1) {
+		   $(this).find('a').on('click', function() {
+			   window.open(TWITTER, "twitterWindow");
+		   });
+	   }else if(idx == 0) {
+		   $(this).find('a').on('click', function() {
+			   window.open(FACEBOOK, "facebookWindow");
+		   });
+	   }
+   });
+   
+   //$('body').on("click", "ul.snsWrap", function(){
+	 //  $('li:last-child').zclip({
+		//   path:'/js/ZeroClipboard.swf',
+		  // copy:function(){return HREF;},
+		  // afterCopy:function(){alert('현재 페이지의 주소가 복사되었습니다.');}
+		  // });
+	  //});
+
+});
