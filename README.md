@@ -8,7 +8,7 @@ CU 편의점을 이용하는 목적에 맞게 콘텐츠를 재배치하였습니
 메인 페이지와 함께 서브메뉴인 CU소개 페이지, 창업안내 페이지도 제작하였고 각 메뉴의 의도에 맞게 콘텐츠를 배치하였습니다.
 
 **블로그 설명
-https://blog.naver.com/jisu721itzy212/222719791991
+https://blog.naver.com/zhwltlr/222719791991
 <br/>
 **웹페이지
 http://vyoungv7340.dothome.co.kr/nicetocu/
